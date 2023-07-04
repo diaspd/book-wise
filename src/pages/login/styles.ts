@@ -1,4 +1,5 @@
-import { styled } from '../../styles/index';
+import { keyframes, styled } from '../../styles/index';
+import Image from 'next/image'
 
 export const Container = styled('div', {
   width: '100vw',
@@ -10,6 +11,18 @@ export const Container = styled('div', {
     flexDirection: 'column',
   }
 })
+
+const scaleUp = keyframes({
+  '0%, 20%, 50%, 80%, 100%': {transform: 'translateY(0)'},
+	'20%': {transform: 'translateY(-30px)'},
+	'65%': {transform: 'translateY(-15px)'},
+})
+
+export const HeroImg = styled(Image, {
+  animation: `${scaleUp} 5s ease infinite`,
+})
+
+
 
 export const Hero = styled('div', {
   width: '35%',
@@ -32,7 +45,7 @@ export const LoginContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  marginRight: '25%',
+  marginRight: '20%',
   gap: '$4',
 
   p: {
@@ -50,7 +63,7 @@ export const Button = styled('button', {
   display: 'flex',
   padding: '$5',
   alignItems: 'center',
-  width: '100%',
+  width: '372px',
   borderRadius: '$md',
   backgroundColor: '$gray600',
   color: '$white',

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { useRouter } from "next/navigation"
 
-import { Container, Hero, LoginContainer, Button } from "./styles";
+import { Container, Hero, LoginContainer, Button, HeroImg } from "./styles";
 
-import HeroImg from '../../assets/logo.svg'
+import HeroImage from '../../assets/logo.svg'
 import GoogleImg from '../../assets/google.svg'
 import GithubImg from '../../assets/github.svg'
 import RocketImg from '../../assets/rocket.svg'
@@ -19,7 +19,7 @@ export default function Login() {
   return (
     <Container>
         <Hero>
-          <Image src={HeroImg} width={232} height={58} alt="Book Wise" />
+          <HeroImg src={HeroImage} width={232} height={58} alt="Book Wise" />
         </Hero>
         <LoginContainer>
           <h1>
