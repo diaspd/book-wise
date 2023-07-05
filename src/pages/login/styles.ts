@@ -22,8 +22,6 @@ export const HeroImg = styled(Image, {
   animation: `${scaleUp} 5s ease infinite`,
 })
 
-
-
 export const Hero = styled('div', {
   width: '35%',
   margin: '$5 auto $5 $5',
