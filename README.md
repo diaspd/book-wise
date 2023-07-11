@@ -1,3 +1,16 @@
+## 💻 Technologies
+
+This project was developed with the following technologies:
+<b>
+</b>
+
+</br>
+
+## 📄 Project
+💰 .
+
+<br></br>
+
 # Book-wise
 
 A book store online
