@@ -2,8 +2,6 @@
   <img src="./src/assets/logo.svg" alt="logo" />
 </div>
 
-A book store online
-
 ## 💻 Technologies
 
 This project was developed with the following technologies:
