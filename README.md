@@ -1,5 +1,5 @@
 <div align="center">  
-<img src="./src/assets/logo.svg" alt="logo" />
+  <img src="./src/assets/logo.svg" alt="logo" />
 </div>
 
 A book store online
