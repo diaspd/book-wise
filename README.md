@@ -2,6 +2,8 @@
   <img src="./src/assets/logo.svg" alt="logo" />
 </div>
 
+---
+
 ## 💻 Technologies
 
 This project was developed with the following technologies:
