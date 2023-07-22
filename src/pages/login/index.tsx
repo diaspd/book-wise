@@ -7,13 +7,22 @@ import HeroImage from '../../assets/logo.svg'
 import GoogleImg from '../../assets/google.svg'
 import GithubImg from '../../assets/github.svg'
 import RocketImg from '../../assets/rocket.svg'
+import { signIn } from 'next-auth/react';
 
-
-export default function Login() {
+type AuthButtonProps = {
+  callbackUrl?: string
+}
+export default function Login({ callbackUrl = "/" }: AuthButtonProps) {
   const router = useRouter()
-  
-  function handleAccessAsGuest() {
-    router.push("/home")
+  const handleSignInGithub = (provider?: string) => {
+    if (!provider) {
+      router.push(callbackUrl)
+      return
+    }
+
+    signIn(provider, {
+      callbackUrl,
+    })
   }
 
   return (
@@ -27,9 +36,9 @@ export default function Login() {
           </h1>
           <p>Faça seu login ou acesse como visitante.</p>
 
-          <Button><Image src={GoogleImg} width={32} height={32} alt="" /> <span>Entrar com Google</span></Button>
-          <Button><Image src={GithubImg} width={32} height={32} alt="" /><span>Entrar com GitHub</span></Button>
-          <Button onClick={handleAccessAsGuest}><Image src={RocketImg} width={32} height={32} alt="Foguete" /><span>Acessar como visitante</span></Button>
+          <Button onClick={() => handleSignInGithub("google")}><Image src={GoogleImg} width={32} height={32} alt="" /> <span>Entrar com Google</span></Button>
+          <Button onClick={() => handleSignInGithub("github")}><Image src={GithubImg} width={32} height={32} alt="" /><span>Entrar com GitHub</span></Button>
+          <Button onClick={() => handleSignInGithub()}><Image src={RocketImg} width={32} height={32} alt="Foguete" /><span>Acessar como visitante</span></Button>
         </LoginContainer>
     </Container>
   )

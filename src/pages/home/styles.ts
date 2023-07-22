@@ -303,3 +303,7 @@ export const BookCardImage = styled(Image, {
   height: 152,
   width: 108,
 })
+
+export const Img = styled(Image, {
+
+})

@@ -1,1 +1,1 @@
-export { default } from './login/index';
+export { default } from './home/index';
