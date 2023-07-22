@@ -1,13 +1,14 @@
+<div align="center">  
+  <img src="./src/assets/logo.svg" alt="logo" />
+</div>
 
-# Book-wise
-
-A book store online
+---
 
 ## 💻 Technologies
 
 This project was developed with the following technologies:
 <b>
-- Next
+- Nextjs
 </b>
 
 </br>
