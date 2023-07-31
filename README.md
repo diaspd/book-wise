@@ -10,6 +10,7 @@ This project was developed with the following technologies:
 <b>
 - Nextjs
 - TypeScript
+- Stitches
 </b>
 
 </br>
