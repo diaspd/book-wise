@@ -1,6 +1,7 @@
 import { useSession } from "next-auth/react";
+import Image from 'next/image';
 
-import { Container, Sidebar, StartContainer, TrendingContainer, Books, BookCardImage, BookCard, ListBookCard, BookContent, SeeAllLink, LinkContainer, LogoImg,SignInLink, StyledLink, TitleContainer, BookImage, AvatarImage, Img } from "./styles";
+import { Container, Sidebar, StartContainer, TrendingContainer, Books, BookCardImage, BookCard, ListBookCard, BookContent, SeeAllLink, LinkContainer, LogoImg,SignInLink, StyledLink, TitleContainer, BookImage, AvatarImage } from "./styles";
 
 import HeroImg from '../../assets/logo.svg'
 import GraphImg from '../../assets/graph.svg' 
@@ -16,7 +17,7 @@ export default function Home() {
     <Container>
         <Sidebar>
           <LogoImg href="/">
-            <Img src={HeroImg} width={180} height={40} alt="Book Wise"/>
+            <Image src={HeroImg} width={180} height={40} alt="Book Wise"/>
           </LogoImg>
 
           <LinkContainer>
@@ -38,7 +39,7 @@ export default function Home() {
         </Sidebar>
         <StartContainer>
           <TitleContainer>
-            <Img src={GraphImg} width={32} height={32} alt="" />
+            <Image src={GraphImg} width={32} height={32} alt="" />
             <h1>Início</h1>
           </TitleContainer>
 
