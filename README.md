@@ -4,6 +4,12 @@
 
 ---
 
+<div align="center">  
+  <img src="./src/assets/template.svg" alt="template" />
+</div>
+
+</br>
+
 ## 🚀 Getting started
 
 Clone the project and access the folder.
