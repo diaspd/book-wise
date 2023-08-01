@@ -12,6 +12,7 @@ This project was developed with the following technologies:
 - TypeScript
 - Stitches
 - OAuth
+- Prisma
 </b>
 
 </br>
