@@ -4,6 +4,28 @@
 
 ---
 
+## 🚀 Getting started
+
+Clone the project and access the folder.
+
+```bash
+$ git clone https://github.com/diaspd/
+$ cd 
+```
+
+## Installation
+
+```bash
+$ npm install
+```
+
+## Running the app
+
+```bash
+$ npm run dev
+```
+</br>
+
 ## 💻 Technologies
 
 This project was developed with the following technologies:
@@ -11,6 +33,8 @@ This project was developed with the following technologies:
 - Nextjs
 - TypeScript
 - Stitches
+- OAuth
+- Prisma
 </b>
 
 </br>
