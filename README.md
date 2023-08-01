@@ -11,6 +11,7 @@ This project was developed with the following technologies:
 - Nextjs
 - TypeScript
 - Stitches
+- OAuth
 </b>
 
 </br>
