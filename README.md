@@ -2,6 +2,16 @@
   <img src="./src/assets/logo.svg" alt="logo" />
 </div>
 
+// <h2 align="center">Link to site online: <a href="" target="_blank">Book Wise</a> </h2>
+
+<div align="center">
+  <b>
+    <a href="#-Technologies"><b>Technologies</b></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-Project"><b>Project</b></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-Layout"><b>Layout</b></a>&nbsp;&nbsp;&nbsp;
+  </b>  
+</div>
+
 ---
 
 <div align="center">  
