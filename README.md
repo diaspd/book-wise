@@ -2,7 +2,7 @@
   <img src="./src/assets/logo.svg" alt="logo" />
 </h1>
 
-// <h2 align="center">Link to site online: <a href="" target="_blank">Book Wise</a> </h2>
+<h2 align="center">Link to site online: <a href="" target="_blank">Book Wise</a> </h2>
 
 <div align="center">
   <b>
