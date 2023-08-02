@@ -15,7 +15,7 @@
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://github.com/diaspd/
+$ git clone https://github.com/diaspd/book-wise.git
 $ cd 
 ```
 
