@@ -1,6 +1,6 @@
-<div align="center">  
+<h1 align="center">  
   <img src="./src/assets/logo.svg" alt="logo" />
-</div>
+</h1>
 
 // <h2 align="center">Link to site online: <a href="" target="_blank">Book Wise</a> </h2>
 
