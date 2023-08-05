@@ -128,15 +128,11 @@ export const UserDetails = styled("div", {
   alignItems: 'center',
   gap: '$3',
 
-  '&:hover': {
-    cursor: 'pointer',
-  },
-
   p: {
     fontWeight: '500',
     maxWidth: 100,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-  }
+  },
 })

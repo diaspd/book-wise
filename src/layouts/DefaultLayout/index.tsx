@@ -8,6 +8,7 @@ import { ReactNode } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { signOut, useSession } from 'next-auth/react'
+import { Avatar } from '@/components/Avatar'
 
 type DefaultLayoutProps = {
   children: ReactNode
@@ -18,6 +19,10 @@ export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
   const router = useRouter()
 
   const { data: session } = useSession();
+
+  const handleOpenProfile = () => {
+    router.push(`/profile/${session?.user.id}`)
+  }
 
   return (
     <Container >
@@ -43,7 +48,7 @@ export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
 
         {
           session && (
-            <StyledLink href={`/profile/${session.user.id}`} >
+            <StyledLink href={`/profile/${session?.user.id}`} >
               <User size={24} /> 
               Perfil
             </StyledLink>
@@ -61,8 +66,15 @@ export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
             </SignInLink>
           ) : (
             <UserDetails onClick={() => signOut()}>
-              <p>{session.user?.name}</p>
-              <SignOut color="#f75a68"/>
+              <Avatar 
+                size="sm" 
+                src={session?.user?.avatar_url} 
+                alt={session?.user?.name} 
+                onClick={handleOpenProfile} 
+                style={{ cursor: 'pointer' }} 
+              />
+              <p>{session?.user?.name}</p>
+              <SignOut color="#f75a68" style={{ cursor: 'pointer'}} />
             </UserDetails>
           )
       }
