@@ -4,11 +4,12 @@ import Link from 'next/link';
 
 export const Container = styled('div', {
   display: 'grid',
-  gridTemplateColumns: '20rem 2fr 1fr',
-  
-  paddingRight: '10rem',
+  height: '100%',
+
+  gridTemplateColumns: '1fr 308px',
+  gap: 64,
    
-  overflowY: 'auto',
+  overflow: 'hidden',
 
   '@media (max-width: 864px)': {
     display: 'flex',
@@ -25,8 +26,16 @@ export const StartContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   paddingTop: '$4',
-  height: '100vh',
-  margin: 'auto $4 0 6rem',
+
+  overflowY: 'auto',
+  height: '100%',
+  width: '100%',
+
+  paddingBottom: 40,
+
+  "&::-webkit-scrollbar": {
+    display: 'none',
+  },
 
   '@media (max-width: 864px)': {
     width: '100%',
@@ -37,7 +46,6 @@ export const StartContainer = styled('main', {
 
 export const TitleContainer = styled('div', {
   display: 'flex',
-  marginTop: '4.5rem',
   gap: '$3',
   alignItems: 'center',
   lineHeight: '$base',
@@ -68,7 +76,6 @@ export const BookCard = styled('div', {
   background: '$gray700',
   borderRadius: '$md',
   height: 290,
-  
 
   [`> div`]: {
     marginTop: '$8',

@@ -10,6 +10,7 @@ import { Stars } from "@/components/Stars";
 import { BookCardVariant } from "./components/BookCardVariant";
 import { NextPageWithLayout } from "../_app";
 import { DefaultLayout } from "@/layouts/DefaultLayout";
+import { Avatar } from "@/components/Avatar";
 
 const HomePage: NextPageWithLayout = () => {
   return (
@@ -27,7 +28,7 @@ const HomePage: NextPageWithLayout = () => {
               <BookCard>
                   <header>
                     <section>
-                        <AvatarImage src="https://github.com/diaspd.png" width={500} height={500} alt="" />
+                        <Avatar src="https://github.com/diaspd.png" alt="" />
                       <div>
                         <span>Pedro Dias</span>
                         <p>Hoje</p>        
