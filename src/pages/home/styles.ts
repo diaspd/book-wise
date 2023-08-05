@@ -17,46 +17,8 @@ export const Container = styled('div', {
   }
 })
 
-export const Sidebar = styled('section', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  height: '98vh',
-  
-  margin: '$2',
-  paddingTop: '$10',
-  borderRadius: '$md',
-  
-
-  background: 'linear-gradient(190deg, rgba(2,0,36,0.4099811799719888) 0%, rgba(49,40,121,0.8357514880952381) 38%)',
-
-
-  '@media (max-width: 864px)': {
-    width: '100%',
-    height: '50%',
-    gap: '$4'
-  }
-})
-
 export const LogoImg = styled(Link, {
 
-})
-
-export const SignInLink = styled(Link, {
-  display: 'flex',
-  textDecoration: 'none',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$2',
-  margin: 'auto $8 $2 $8',
-  color: '$gray200',
-  fontWeight: 'bold',
-  paddingBottom: '$4',
-
-  '&:hover': {
-    color: '$gray100',
-  }
 })
 
 export const StartContainer = styled('main', {
@@ -207,36 +169,6 @@ export const BookImage = styled(Image, {
   width: 64,
 })
 
-export const StyledLink = styled(Link, {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$3',
-  textDecoration: 'none',
-  color: '$gray400',
-  marginLeft: '-2rem',
-  paddingLeft: '$4',
-  fontSize: '$md',
-  fontWeight: 'bold',  
-  borderLeft: `5px solid transparent`,
-  borderRadius: '$xs',
-  transition: 'all 0.4s ease-in-out',
-
-  '&:focus': {
-    borderImage: '',
-    borderLeft: `5px solid white`,
-    color: '$gray100',
-  },
-
-  '&:active': {
-    color: '$gray100'
-  },
-
-  '&:hover': {
-    color: '$gray100',
-  }
-})
-
 export const SeeAllLink = styled(Link, {
   color: '$purple100',
   display: 'flex',
@@ -250,15 +182,6 @@ export const SeeAllLink = styled(Link, {
   '&:hover': {
     color: '$purple200',
   }
-})
-
-export const LinkContainer = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'start',
-  gap: '$6',
-  marginTop: '4rem',
-  justifyContent: 'center',
 })
 
 export const ListBookCard = styled('section', {

@@ -1,42 +1,19 @@
 import { useSession } from "next-auth/react";
 import Image from 'next/image';
 
-import { Container, Sidebar, StartContainer, TrendingContainer, Books, BookCardImage, BookCard, ListBookCard, BookContent, SeeAllLink, LinkContainer, LogoImg,SignInLink, StyledLink, TitleContainer, BookImage, AvatarImage } from "./styles";
+import { Container, StartContainer, TrendingContainer, Books, BookCardImage, BookCard, ListBookCard, BookContent, SeeAllLink, TitleContainer, BookImage, AvatarImage } from "./styles";
 
-import HeroImg from '../../assets/logo.svg'
 import GraphImg from '../../assets/graph.svg' 
-import { Binoculars, CaretRight, ChartLineUp, SignIn } from "phosphor-react";
+import { CaretRight } from "phosphor-react";
 
 import { Stars } from "@/components/Stars";
 import { BookCardVariant } from "./components/BookCardVariant";
+import { NextPageWithLayout } from "../_app";
+import { DefaultLayout } from "@/layouts/DefaultLayout";
 
-export default function Home() {
-  const { data } = useSession();
-
+const HomePage: NextPageWithLayout = () => {
   return (
-    <Container>
-        <Sidebar>
-          <LogoImg href="/">
-            <Image src={HeroImg} width={180} height={40} alt="Book Wise"/>
-          </LogoImg>
-
-          <LinkContainer>
-            <StyledLink href="/" title="Start"> 
-              <ChartLineUp size={24} />
-              Início
-            </StyledLink>
-
-            <StyledLink href="/explore" title="Explore"> 
-              <Binoculars size={24} />
-                Explorar
-              </StyledLink>
-            </LinkContainer>
-
-              <SignInLink href="/login">
-                Fazer Login 
-                <SignIn size={20} style={{ color: '#50B2C0' }}/> 
-              </SignInLink>
-        </Sidebar>
+    <Container> 
         <StartContainer>
           <TitleContainer>
             <Image src={GraphImg} width={32} height={32} alt="" />
@@ -159,3 +136,13 @@ export default function Home() {
     </Container>
   )
 }
+
+HomePage.getLayout = (page) => {
+  return(
+    <DefaultLayout title="Início">
+      {page}
+    </DefaultLayout>
+  )
+} 
+
+export default HomePage;
