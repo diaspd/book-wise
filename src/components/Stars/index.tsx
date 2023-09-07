@@ -1,4 +1,4 @@
-import { StarInput, StarLabel } from "./styles";
+import { StarInput, StarLabel } from './styles'
 
 export function Stars() {
   return (

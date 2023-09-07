@@ -1,5 +1,5 @@
-import { styled } from "@/styles"
-import Image from 'next/image';
+import { styled } from '@/styles'
+import Image from 'next/image'
 
 export const BookCard = styled('div', {
   display: 'flex',
@@ -14,7 +14,6 @@ export const BookCard = styled('div', {
     display: 'grid',
     gap: '$2',
     gridTemplateColumns: '1fr 5fr',
-
   },
 
   header: {
@@ -37,13 +36,13 @@ export const BookCard = styled('div', {
       p: {
         color: '$gray400',
         fontSize: '$sm',
-      }
+      },
     },
   },
 
   '@media (max-width: 864px)': {
     width: '100%',
-  }
+  },
 })
 
 export const Description = styled('div', {
@@ -53,21 +52,20 @@ export const Description = styled('div', {
 
   [`> span`]: {
     marginBottom: '$3',
-    color: '$gray300'
+    color: '$gray300',
   },
-       
-    p: {
-      height: '88px',
-      overflow: 'hidden',
-      fontSize: '$sm',
-      lineHeight: '$base',
-      textOverflow: 'ellipsis',
-      display: '-webkit-box',
-      '-webkit-line-clamp': 4,
-      '-webkit-box-orient': 'vertical',
-    }
+
+  p: {
+    height: '88px',
+    overflow: 'hidden',
+    fontSize: '$sm',
+    lineHeight: '$base',
+    textOverflow: 'ellipsis',
+    display: '-webkit-box',
+    '-webkit-line-clamp': 4,
+    '-webkit-box-orient': 'vertical',
   },
-)
+})
 
 export const BookCardImage = styled(Image, {
   borderRadius: '$md',

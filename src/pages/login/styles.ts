@@ -1,4 +1,4 @@
-import { keyframes, styled } from '../../styles/index';
+import { keyframes, styled } from '../../styles/index'
 import Image from 'next/image'
 
 export const Container = styled('div', {
@@ -9,13 +9,13 @@ export const Container = styled('div', {
 
   '@media (max-width: 864px)': {
     flexDirection: 'column',
-  }
+  },
 })
 
 const scaleUp = keyframes({
-  '0%, 20%, 50%, 80%, 100%': {transform: 'translateY(0)'},
-	'20%': {transform: 'translateY(-30px)'},
-	'65%': {transform: 'translateY(-15px)'},
+  '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+  '20%': { transform: 'translateY(-30px)' },
+  '65%': { transform: 'translateY(-15px)' },
 })
 
 export const HeroImg = styled(Image, {
@@ -30,13 +30,14 @@ export const Hero = styled('div', {
   alignItems: 'center',
   borderRadius: '$md',
 
-  background: 'linear-gradient(190deg, rgba(2,0,36,0.4099811799719888) 0%, rgba(49,40,121,0.8357514880952381) 38%)',
+  background:
+    'linear-gradient(190deg, rgba(2,0,36,0.4099811799719888) 0%, rgba(49,40,121,0.8357514880952381) 38%)',
 
   '@media (max-width: 864px)': {
     width: '90%',
     height: '20%',
     margin: '$4',
-  }
+  },
 })
 
 export const LoginContainer = styled('div', {
@@ -48,12 +49,12 @@ export const LoginContainer = styled('div', {
 
   p: {
     marginTop: '-$4',
-    marginBottom: '$8'
+    marginBottom: '$8',
   },
 
   '@media (max-width: 864px)': {
-    margin: '$2'
-  }
+    margin: '$2',
+  },
 })
 
 export const Button = styled('button', {
@@ -76,6 +77,6 @@ export const Button = styled('button', {
 
   '@media (max-width: 864px)': {
     width: '90%',
-    marginBottom: '$2'
-  }
+    marginBottom: '$2',
+  },
 })

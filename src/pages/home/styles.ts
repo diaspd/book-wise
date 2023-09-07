@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { styled } from '../../styles/index';
-import Link from 'next/link';
+import Image from 'next/image'
+import { styled } from '../../styles/index'
+import Link from 'next/link'
 
 export const Container = styled('div', {
   display: 'grid',
@@ -8,32 +8,30 @@ export const Container = styled('div', {
 
   gridTemplateColumns: '1fr 308px',
   gap: 64,
-   
+
   overflow: 'hidden',
 
   '@media (max-width: 864px)': {
     display: 'flex',
     padding: '$2 2rem',
     flexDirection: 'column',
-  }
+  },
 })
 
-export const LogoImg = styled(Link, {
-
-})
+export const LogoImg = styled(Link, {})
 
 export const StartContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   paddingTop: '$4',
-  
+
   paddingBottom: '5rem',
 
   overflowY: 'auto',
   height: '100%',
   width: '100%',
 
-  "&::-webkit-scrollbar": {
+  '&::-webkit-scrollbar': {
     display: 'none',
   },
 
@@ -41,7 +39,7 @@ export const StartContainer = styled('main', {
     width: '100%',
     height: '30%',
     margin: '$2',
-  }
+  },
 })
 
 export const TitleContainer = styled('div', {
@@ -66,7 +64,7 @@ export const Books = styled('div', {
 
   '@media (max-width: 864px)': {
     width: '100%',
-  }
+  },
 })
 
 export const TrendingContainer = styled('div', {
@@ -75,9 +73,9 @@ export const TrendingContainer = styled('div', {
   height: '100vh',
   margin: '0 $4 0 0',
 
-  ['> div']: {
+  '> div': {
     display: 'flex',
-    justifyContent: 'space-between',	
+    justifyContent: 'space-between',
     gap: '$4',
     margin: '5.8rem 2rem $1 0',
     alignItems: 'center',
@@ -85,13 +83,13 @@ export const TrendingContainer = styled('div', {
 
     '@media (max-width: 864px)': {
       marginTop: '$2',
-    }
+    },
   },
 
   '@media (max-width: 864px)': {
     width: '100%',
-    margin: '$2'
-  }
+    margin: '$2',
+  },
 })
 
 export const AvatarImage = styled(Image, {
@@ -120,7 +118,7 @@ export const SeeAllLink = styled(Link, {
 
   '&:hover': {
     color: '$purple200',
-  }
+  },
 })
 
 export const ListBookCard = styled('section', {
@@ -136,13 +134,13 @@ export const ListBookCard = styled('section', {
   '@media (max-width: 864px)': {
     flexDirection: 'column',
     width: '100%',
-    height: 'fit-content'
+    height: 'fit-content',
   },
 
   '@media (max-width: 1400px)': {
     height: 'fit-content',
     flexDirection: 'column',
-  }
+  },
 })
 
 export const BookContent = styled('div', {
@@ -150,12 +148,12 @@ export const BookContent = styled('div', {
   flexDirection: 'column',
   justifyContent: 'space-between',
 
-  ['> section']: {
+  '> section': {
     display: 'flex',
     flexDirection: 'column',
 
-    ['> span']: {
-      color: '$gray400'
+    '> span': {
+      color: '$gray400',
     },
   },
 })

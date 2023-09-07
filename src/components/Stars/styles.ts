@@ -1,4 +1,4 @@
-import { styled } from "@/styles";
+import { styled } from '@/styles'
 
 export const StarInput = styled('input', {
   backgroundImage: `url('../assets/star.svg')`,
@@ -13,11 +13,11 @@ export const StarLabel = styled('label', {
   '&:before': {
     margin: '5px',
     fontSize: '2em',
-    content: "\f005",
+    content: '\f005',
     display: 'inline-block',
   },
 
   '&:hover': {
     color: '#FECE31',
-  }
+  },
 })

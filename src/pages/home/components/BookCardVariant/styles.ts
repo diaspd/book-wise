@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { styled } from '../../../../styles/index';
-import Link from 'next/link';
+import Image from 'next/image'
+import { styled } from '../../../../styles/index'
+import Link from 'next/link'
 
 export const Container = styled('div', {
   display: 'flex',
@@ -10,9 +10,8 @@ export const Container = styled('div', {
     display: 'flex',
     padding: '$2 2rem',
     flexDirection: 'column',
-  }
+  },
 })
-
 
 export const Book = styled('div', {
   display: 'flex',
@@ -23,7 +22,7 @@ export const Book = styled('div', {
   paddingRight: '$2',
   paddingBottom: '$6',
 
-  ['> div']: {
+  '> div': {
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between',
@@ -34,7 +33,7 @@ export const Book = styled('div', {
 
   '@media (max-width: 864px)': {
     width: '100%',
-  }
+  },
 })
 
 export const BookCard = styled('div', {
@@ -44,7 +43,6 @@ export const BookCard = styled('div', {
   background: '$gray600',
   borderRadius: '$md',
   height: 192,
-  
 
   [`> div`]: {
     display: 'grid',
@@ -57,9 +55,8 @@ export const BookCard = styled('div', {
 
       [`> span`]: {
         marginBottom: '$3',
-        color: '$gray400'
+        color: '$gray400',
       },
-       
     },
 
     p: {
@@ -71,7 +68,7 @@ export const BookCard = styled('div', {
       display: '-webkit-box',
       '-webkit-line-clamp': 2,
       '-webkit-box-orient': 'vertical',
-    }
+    },
   },
 
   header: {
@@ -89,13 +86,13 @@ export const BookCard = styled('div', {
       [`> p`]: {
         color: '$gray300',
         fontSize: '$sm',
-      }
+      },
     },
   },
 
   '@media (max-width: 864px)': {
     width: '100%',
-  }
+  },
 })
 
 export const SeeAllLink = styled(Link, {
@@ -110,7 +107,7 @@ export const SeeAllLink = styled(Link, {
 
   '&:hover': {
     color: '$purple200',
-  }
+  },
 })
 
 export const BookCardImage = styled(Image, {
