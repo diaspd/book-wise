@@ -1,3 +1,4 @@
+import { nunito } from "@/pages/_app";
 import { globalCss } from "./index";
 
 export const globalStyles = globalCss({
@@ -5,6 +6,10 @@ export const globalStyles = globalCss({
     margin: 0,
     padding: 0,
     boxSizing: 'border-box',
+  },
+
+  html: {
+    fontFamily: nunito.style.fontFamily
   },
 
   body: {

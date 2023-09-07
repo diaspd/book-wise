@@ -9,7 +9,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { signOut, useSession } from 'next-auth/react'
 import { Avatar } from '@/components/Avatar'
-import { getCssText } from '../../styles';
 
 type DefaultLayoutProps = {
   children: ReactNode
