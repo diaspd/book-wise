@@ -83,28 +83,6 @@ export const BookCard = styled('div', {
     gap: '$2',
     gridTemplateColumns: '1fr 5fr',
 
-    [`> div`]: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '$1',
-
-      [`> span`]: {
-        marginBottom: '$3',
-        color: '$gray300'
-      },
-       
-    },
-
-    p: {
-      height: '88px',
-      overflow: 'hidden',
-      fontSize: '$sm',
-      lineHeight: '$base',
-      textOverflow: 'ellipsis',
-      display: '-webkit-box',
-      '-webkit-line-clamp': 4,
-      '-webkit-box-orient': 'vertical',
-    }
   },
 
   header: {
@@ -135,6 +113,29 @@ export const BookCard = styled('div', {
     width: '100%',
   }
 })
+
+export const Description = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '$1',
+
+  [`> span`]: {
+    marginBottom: '$3',
+    color: '$gray300'
+  },
+       
+    p: {
+      height: '88px',
+      overflow: 'hidden',
+      fontSize: '$sm',
+      lineHeight: '$base',
+      textOverflow: 'ellipsis',
+      display: '-webkit-box',
+      '-webkit-line-clamp': 4,
+      '-webkit-box-orient': 'vertical',
+    }
+  },
+)
 
 export const TrendingContainer = styled('div', {
   display: 'flex',
