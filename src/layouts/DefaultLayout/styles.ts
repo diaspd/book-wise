@@ -41,7 +41,7 @@ export const Sidebar = styled('aside', {
 })
 
 export const LogoImg = styled(Link, {
-
+  
 })
 
 export const LinkContainer = styled('div', {
@@ -64,19 +64,9 @@ export const StyledLink = styled(Link, {
   paddingLeft: '$4',
   fontSize: '$md',
   fontWeight: 'bold',  
-  borderLeft: `5px solid transparent`,
+  borderLeft: `3px solid transparent`,
   borderRadius: '$xs',
   transition: 'all 0.4s ease-in-out',
-
-  '&:focus': {
-    borderImage: '',
-    borderLeft: `5px solid white`,
-    color: '$gray100',
-  },
-
-  '&:active': {
-    color: '$gray100'
-  },
 
   '&:hover': {
     color: '$gray100',
@@ -86,21 +76,21 @@ export const StyledLink = styled(Link, {
     content: "''",
     width: 4,
     height: 24,
-    background: '$gradient-vertical',
-    marginRight: '$4',
-    borderRadius: '$full',
-    transition: '0.2s',
-    opacity: 0
+    background: "$gradient-vertical",
+    marginRight: "$4",
+    borderRadius: "$full",
+    transition: "0.2s",
+    opacity: 0,
   },
 
   variants: {
     active: {
       true: {
-        color: '$gray100',
-        fontWeight: 'bold',
-      
+        color: "$gray100",
+        fontWeight: "$bold",
+
         "&::before": {
-          opacity: 1
+          opacity: 1,
         }
       }
     }

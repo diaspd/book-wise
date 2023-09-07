@@ -26,12 +26,12 @@ export const StartContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   paddingTop: '$4',
+  
+  paddingBottom: '5rem',
 
   overflowY: 'auto',
   height: '100%',
   width: '100%',
-
-  paddingBottom: 40,
 
   "&::-webkit-scrollbar": {
     display: 'none',
@@ -69,86 +69,17 @@ export const Books = styled('div', {
   }
 })
 
-export const BookCard = styled('div', {
-  display: 'flex',
-  padding: '$6',
-  flexDirection: 'column',
-  background: '$gray700',
-  borderRadius: '$md',
-  height: 290,
-
-  [`> div`]: {
-    marginTop: '$8',
-    display: 'grid',
-    gap: '$2',
-    gridTemplateColumns: '1fr 5fr',
-
-  },
-
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-
-    section: {
-      display: 'flex',
-      gap: '$4',
-    },
-
-    div: {
-      display: 'flex',
-      flexDirection: 'column',
-
-      span: {
-        fontSize: '$md',
-      },
-
-      p: {
-        color: '$gray400',
-        fontSize: '$sm',
-      }
-    },
-  },
-
-  '@media (max-width: 864px)': {
-    width: '100%',
-  }
-})
-
-export const Description = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '$1',
-
-  [`> span`]: {
-    marginBottom: '$3',
-    color: '$gray300'
-  },
-       
-    p: {
-      height: '88px',
-      overflow: 'hidden',
-      fontSize: '$sm',
-      lineHeight: '$base',
-      textOverflow: 'ellipsis',
-      display: '-webkit-box',
-      '-webkit-line-clamp': 4,
-      '-webkit-box-orient': 'vertical',
-    }
-  },
-)
-
 export const TrendingContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  paddingTop: '$4',
   height: '100vh',
-  margin: 'auto $4 0 0',
+  margin: '0 $4 0 0',
 
   ['> div']: {
     display: 'flex',
     justifyContent: 'space-between',	
-    gap: '$3',
-    margin: '9rem 2.5rem $1 0',
+    gap: '$4',
+    margin: '5.8rem 2rem $1 0',
     alignItems: 'center',
     lineHeight: '$base',
 
@@ -196,7 +127,8 @@ export const ListBookCard = styled('section', {
   display: 'flex',
   padding: '$6',
   gap: '$6',
-  margin: '$2 $10 $2 0',
+  margin: '$2 $5 $2 0',
+  width: '100%',
   background: '$gray700',
   borderRadius: '$md',
   height: 135,
@@ -226,11 +158,4 @@ export const BookContent = styled('div', {
       color: '$gray400'
     },
   },
-})
-
-export const BookCardImage = styled(Image, {
-  borderRadius: '$md',
-  marginRight: '$2',
-  height: 152,
-  width: 108,
 })

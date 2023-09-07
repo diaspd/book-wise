@@ -20,5 +20,5 @@ export default function App({ Component, pageProps: {session, ...pageProps} }: A
     <SessionProvider session={session}>
       {getLayout(<Component {...pageProps} />)}
     </SessionProvider>
-      )
+    )
 }

@@ -29,7 +29,6 @@ export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
     <Container >
       <Head>
         <title>{`${title} | Book Wise`}</title>
-        <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
       </Head>
     <Sidebar>
       <header>
@@ -38,21 +37,21 @@ export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
     </LogoImg>
 
     <LinkContainer>
-      <StyledLink href="/" title="Start" active={router.asPath === '/'}> 
+      <StyledLink href="/" title="Start" active> 
         <ChartLineUp size={24} />
-        Início
+        <span>Início</span>  
       </StyledLink>
 
       <StyledLink href="/explore" title="Explore" active={router.asPath === '/explore'}> 
         <Binoculars size={24} />
-          Explorar
+        <span> Explorar </span>
       </StyledLink>
 
         {
           session && (
             <StyledLink href={`/profile/${session?.user.id}`} >
               <User size={24} /> 
-              Perfil
+              <span>Perfil</span>
             </StyledLink>
           )
         }
