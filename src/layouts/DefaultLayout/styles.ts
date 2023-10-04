@@ -22,7 +22,7 @@ export const Sidebar = styled('aside', {
   alignItems: 'center',
   justifyContent: 'space-between',
 
-  width: 234,
+  width: 300,
   height: 'calc(100% - 40px)',
 
   margin: 20,

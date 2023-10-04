@@ -7,7 +7,7 @@ import { ReactElement, ReactNode } from 'react'
 
 export const nunito = Nunito({ subsets: ['latin'] })
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+export type NextPageWithLayout<P = string, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
 }
 

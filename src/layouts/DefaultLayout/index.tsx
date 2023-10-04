@@ -74,7 +74,7 @@ export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
             <SignIn size={20} style={{ color: '#50B2C0' }} />
           </SignInLink>
         ) : (
-          <UserDetails onClick={() => signOut()}>
+          <UserDetails>
             <Avatar
               size="sm"
               src={session?.user?.avatar_url}
@@ -83,7 +83,11 @@ export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
               style={{ cursor: 'pointer' }}
             />
             <p>{session?.user?.name}</p>
-            <SignOut color="#f75a68" style={{ cursor: 'pointer' }} />
+            <SignOut
+              color="#f75a68"
+              style={{ cursor: 'pointer' }}
+              onClick={() => signOut()}
+            />
           </UserDetails>
         )}
       </Sidebar>

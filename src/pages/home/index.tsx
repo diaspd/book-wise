@@ -1,27 +1,14 @@
-import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 
-import {
-  Container,
-  StartContainer,
-  TrendingContainer,
-  Books,
-  ListBookCard,
-  BookContent,
-  SeeAllLink,
-  TitleContainer,
-  BookImage,
-  AvatarImage,
-} from './styles'
+import { Container, StartContainer, Books, TitleContainer } from './styles'
 
 import GraphImg from '../../assets/graph.svg'
-import { CaretRight } from 'phosphor-react'
 
-import { Stars } from '@/components/Stars'
 import { BookCardVariant } from './components/BookCardVariant'
 import { NextPageWithLayout } from '../_app'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { Ratingcard } from '@/components/RatingCard'
+import { TrandingCard } from './components/TrandingCard'
 
 const HomePage: NextPageWithLayout = () => {
   return (
@@ -43,50 +30,7 @@ const HomePage: NextPageWithLayout = () => {
         </Books>
       </StartContainer>
 
-      <TrendingContainer>
-        <div>
-          <span> Livros populares</span>
-          <SeeAllLink href="/explore">
-            Ver todos
-            <CaretRight />
-          </SeeAllLink>
-        </div>
-
-        <ListBookCard>
-          <BookImage
-            src="https://github.com/diaspd.png"
-            width={64}
-            height={94}
-            alt=""
-          />
-          <BookContent>
-            <section>
-              <strong>A revolução dos bichos</strong>
-              <span>George Orwell</span>
-            </section>
-            <div>
-              <Stars />
-            </div>
-          </BookContent>
-        </ListBookCard>
-        <ListBookCard>
-          <BookImage
-            src="https://github.com/diaspd.png"
-            width={64}
-            height={94}
-            alt=""
-          />
-          <BookContent>
-            <section>
-              <strong>A revolução dos bichos</strong>
-              <span>George Orwell</span>
-            </section>
-            <div>
-              <Stars />
-            </div>
-          </BookContent>
-        </ListBookCard>
-      </TrendingContainer>
+      <TrandingCard />
     </Container>
   )
 }
