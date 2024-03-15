@@ -1,22 +1,7 @@
 import { styled } from '@/styles'
 import Link from 'next/link'
 
-export const Container = styled('div', {
-  display: 'grid',
-  width: '100%',
-  height: '100vh',
-  gridTemplateColumns: 'auto 1fr',
-})
-
-export const Content = styled('div', {
-  width: '100%',
-  height: '100vh',
-  maxWidth: 996,
-  margin: '0 auto',
-  paddingTop: 72,
-})
-
-export const Sidebar = styled('aside', {
+export const Container = styled('aside', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
