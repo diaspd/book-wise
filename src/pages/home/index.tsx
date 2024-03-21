@@ -1,22 +1,19 @@
-import Image from 'next/image'
-
 import { Container, StartContainer, Books, TitleContainer } from './styles'
-
-import GraphImg from '../../assets/graph.svg'
 
 import { BookCardVariant } from './components/BookCardVariant'
 import { NextPageWithLayout } from '../_app'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { Ratingcard } from '@/components/RatingCard'
 import { TrandingCard } from './components/TrandingCard'
+import { PageTitle } from '@/components/PageTitle'
+import { ChartLineUp } from 'phosphor-react'
 
 const HomePage: NextPageWithLayout = () => {
   return (
     <Container>
       <StartContainer>
         <TitleContainer>
-          <Image src={GraphImg} width={32} height={32} alt="" />
-          <h1>Início</h1>
+          <PageTitle title="Início" icon={<ChartLineUp size={32} />} />
         </TitleContainer>
 
         <BookCardVariant />
