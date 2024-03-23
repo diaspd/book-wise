@@ -6,7 +6,7 @@ export const Container = styled('div', {
   display: 'grid',
   height: '100%',
 
-  gridTemplateColumns: '1fr 308px',
+  gridTemplateColumns: '2fr 1fr',
   gap: 64,
 
   overflow: 'hidden',
@@ -37,17 +37,9 @@ export const StartContainer = styled('main', {
 
   '@media (max-width: 864px)': {
     width: '100%',
-    height: '30%',
+    height: '100%',
     margin: '$2',
   },
-})
-
-export const TitleContainer = styled('div', {
-  display: 'flex',
-  gap: '$3',
-  alignItems: 'center',
-  lineHeight: '$base',
-  marginBottom: '$10',
 })
 
 export const Books = styled('div', {
@@ -55,12 +47,12 @@ export const Books = styled('div', {
   justifyContent: 'start',
   alignItems: 'flex-start',
   flexDirection: 'column',
+  width: '100%',
 
   paddingRight: '$2',
   paddingBottom: '$4',
 
   gap: '$4',
-  maxWidth: 800,
 
   '@media (max-width: 864px)': {
     width: '100%',

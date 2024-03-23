@@ -6,12 +6,19 @@ export const Container = styled('div', {
   width: '100%',
   height: '100vh',
   gridTemplateColumns: 'auto 1fr',
+  overflow: 'hidden',
+
+  '@media (max-width: 864px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    overflowY: 'scroll',
+  },
 })
 
 export const Content = styled('div', {
   width: '100%',
   height: '100vh',
-  maxWidth: 996,
+  maxWidth: 1200,
   margin: '0 auto',
   paddingTop: 72,
 })

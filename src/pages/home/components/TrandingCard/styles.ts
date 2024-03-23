@@ -5,13 +5,12 @@ export const TrendingContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   height: '100vh',
-  margin: '0 $4 0 0',
+  width: '105%',
 
   '> div': {
     display: 'flex',
     justifyContent: 'space-between',
-    gap: '$4',
-    margin: '5.8rem 2rem $1 0',
+    margin: '5.4rem 2rem $1 0',
     alignItems: 'center',
     lineHeight: '$base',
 
@@ -33,6 +32,7 @@ export const SeeAllLink = styled(Link, {
   justifyContent: 'center',
   gap: '$3',
   textDecoration: 'none',
+
   fontWeight: 'bold',
   transition: 'all 0.3s ease-out',
 
@@ -53,8 +53,8 @@ export const ListBookCard = styled('section', {
 
   '@media (max-width: 864px)': {
     flexDirection: 'column',
-    width: '100%',
     height: 'fit-content',
+    width: '100%',
   },
 
   '@media (max-width: 1400px)': {
