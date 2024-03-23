@@ -51,13 +51,16 @@ export const BookCard = styled('div', {
 })
 
 export const Description = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
+  display: 'grid',
   gap: '$1',
 
-  [`> span`]: {
-    marginBottom: '$3',
-    color: '$gray300',
+  [`> div`]: {
+    [`> span`]: {
+      marginBottom: '$3',
+      color: '$gray300',
+      display: 'block',
+      width: '100%',
+    },
   },
 
   p: {

@@ -8,7 +8,6 @@ export const Container = styled('div', {
 
   '@media (max-width: 864px)': {
     display: 'flex',
-    padding: '$2 2rem',
     flexDirection: 'column',
   },
 })
@@ -42,7 +41,7 @@ export const BookCard = styled('div', {
   flexDirection: 'row',
   background: '$gray600',
   borderRadius: '$md',
-  height: 192,
+  height: 220,
 
   [`> main`]: {
     display: 'grid',
