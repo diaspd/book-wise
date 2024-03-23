@@ -5,12 +5,12 @@ export const TrendingContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   height: '100vh',
-  width: '105%',
+  width: '100%',
 
   '> div': {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '5.4rem 2rem $1 0',
+    marginTop: '1rem',
     alignItems: 'center',
     lineHeight: '$base',
 
