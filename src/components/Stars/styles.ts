@@ -1,23 +1,41 @@
 import { styled } from '@/styles'
 
-export const StarInput = styled('input', {
-  backgroundImage: `url('../assets/star.svg')`,
-  backgroundRepeat: 'no-repeat',
-  backgroundColor: '#5e60ce',
-})
+export const Container = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
 
-export const StarLabel = styled('label', {
-  color: '#90A0A3',
-  float: 'right',
+  svg: {
+    color: '$purple100',
+    boxSizing: 'content-box',
 
-  '&:before': {
-    margin: '5px',
-    fontSize: '2em',
-    content: '\f005',
-    display: 'inline-block',
+    '&:first-child': {
+      paddingLeft: 0,
+    },
   },
 
-  '&:hover': {
-    color: '#FECE31',
+  variants: {
+    size: {
+      sm: {
+        svg: {
+          padding: '0 2px',
+          width: 14,
+          height: 14,
+        },
+      },
+      md: {
+        svg: {
+          padding: '0 3px',
+          width: 20,
+          height: 20,
+        },
+      },
+      lg: {
+        svg: {
+          padding: '0 2px',
+          width: 24,
+          height: 24,
+        },
+      },
+    },
   },
 })

@@ -68,6 +68,10 @@ export const BookContent = styled('div', {
   flexDirection: 'column',
   justifyContent: 'space-between',
 
+  '> div': {
+    display: 'flex',
+  },
+
   '> section': {
     display: 'flex',
     flexDirection: 'column',

@@ -23,11 +23,16 @@ export const BookCard = styled('div', {
     section: {
       display: 'flex',
       gap: '$4',
+
+      div: {
+        display: 'flex',
+        flexDirection: 'column',
+      },
     },
 
     div: {
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'row',
 
       span: {
         fontSize: '$md',

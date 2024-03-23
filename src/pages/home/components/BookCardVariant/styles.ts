@@ -39,19 +39,20 @@ export const Book = styled('div', {
 export const BookCard = styled('div', {
   display: 'flex',
   padding: '$6',
-  flexDirection: 'column',
+  flexDirection: 'row',
   background: '$gray600',
   borderRadius: '$md',
   height: 192,
 
-  [`> div`]: {
+  [`> main`]: {
     display: 'grid',
-    gridTemplateColumns: '1fr 5fr',
     gap: '$2',
 
-    [`> div`]: {
+    header: {
       display: 'flex',
-      flexDirection: 'column',
+      justifyContent: 'space-between',
+      width: '100%',
+      flexDirection: 'row',
 
       [`> span`]: {
         marginBottom: '$3',
@@ -68,25 +69,6 @@ export const BookCard = styled('div', {
       display: '-webkit-box',
       '-webkit-line-clamp': 2,
       '-webkit-box-orient': 'vertical',
-    },
-  },
-
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-
-    div: {
-      display: 'flex',
-      flexDirection: 'column',
-
-      span: {
-        fontSize: '$md',
-      },
-
-      [`> p`]: {
-        color: '$gray300',
-        fontSize: '$sm',
-      },
     },
   },
 

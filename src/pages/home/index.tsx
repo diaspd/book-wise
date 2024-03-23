@@ -3,7 +3,7 @@ import { Container, StartContainer, Books, TitleContainer } from './styles'
 import { BookCardVariant } from './components/BookCardVariant'
 import { NextPageWithLayout } from '../_app'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
-import { Ratingcard } from '@/components/RatingCard'
+import { RatingCard } from '@/components/RatingCard'
 import { TrandingCard } from './components/TrandingCard'
 import { PageTitle } from '@/components/PageTitle'
 import { ChartLineUp } from 'phosphor-react'
@@ -21,9 +21,9 @@ const HomePage: NextPageWithLayout = () => {
         <Books>
           <span>Avaliações mais recentes</span>
 
-          <Ratingcard />
-          <Ratingcard />
-          <Ratingcard />
+          <RatingCard />
+          <RatingCard />
+          <RatingCard />
         </Books>
       </StartContainer>
 

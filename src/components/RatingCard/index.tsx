@@ -2,7 +2,7 @@ import { Avatar } from '../Avatar'
 import { Stars } from '../Stars'
 import { BookCard, BookCardImage, Description } from './styles'
 
-export function Ratingcard() {
+export function RatingCard() {
   return (
     <BookCard>
       <header>
@@ -14,9 +14,9 @@ export function Ratingcard() {
           </div>
         </section>
 
-        <legend>
+        <div>
           <Stars />
-        </legend>
+        </div>
       </header>
       <Description>
         <BookCardImage

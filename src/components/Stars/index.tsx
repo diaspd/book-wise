@@ -1,20 +1,18 @@
-import { StarInput, StarLabel } from './styles'
+import { Container } from './styles'
+import { Star } from '@phosphor-icons/react'
+import { ComponentProps } from '@stitches/react'
 
-export function Stars() {
+type RatingStarsProps = ComponentProps<typeof Container> & {
+  rating?: number
+  size?: 'sm' | 'md' | 'lg'
+}
+
+export function Stars({ size = 'sm', ...props }: RatingStarsProps) {
   return (
-    <>
-      <StarInput type="radio" id="star5" name="rating" value="5" />
-      <StarLabel title="Awesome" aria-hidden="true"></StarLabel>
-      <StarInput type="radio" id="star5" name="rating" value="5" />
-      <StarLabel title="Awesome" aria-hidden="true"></StarLabel>
-      <StarInput type="radio" id="star5" name="rating" value="5" />
-      <StarLabel title="Awesome" aria-hidden="true"></StarLabel>
-      <StarInput type="radio" id="star5" name="rating" value="5" />
-      <StarLabel title="Awesome" aria-hidden="true"></StarLabel>
-      <StarInput type="radio" id="star5" name="rating" value="5" />
-      <StarLabel title="Awesome" aria-hidden="true"></StarLabel>
-      <StarInput type="radio" id="star5" name="rating" value="5" />
-      <StarLabel title="Awesome" aria-hidden="true"></StarLabel>
-    </>
+    <Container size={size} {...props}>
+      {Array.from({ length: 5 }).map((_, index) => (
+        <Star key={`star-${index}`} />
+      ))}
+    </Container>
   )
 }

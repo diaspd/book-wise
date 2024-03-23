@@ -14,31 +14,29 @@ export function BookCardVariant() {
           </SeeAllLink>
         </div>
         <BookCard>
-          <div>
-            <BookCardImage
-              src="https://github.com/diaspd.png"
-              width={108}
-              height={152}
-              alt=""
-            />
-            <div>
-              <header>
-                <p>Há 2 dias</p>
-                <legend>
-                  <Stars />
-                </legend>
-              </header>
+          <BookCardImage
+            src="https://github.com/diaspd.png"
+            width={108}
+            height={152}
+            alt=""
+          />
+          <main>
+            <header>
+              <p>Há 2 dias</p>
+              <div>
+                <Stars />
+              </div>
+            </header>
 
-              <strong>Entendendo Algoritmos</strong>
-              <span>Aditya Bhargava</span>
-              <p>
-                Semper et sapien proin vitae nisi. Feugiat neque integer donec
-                et aenean posuere amet ultrices. Cras fermentum id pulvinar
-                varius leo a in. Amet libero pharetra nunc elementum fringilla
-                velit ipsum. Sed vulputat?
-              </p>
-            </div>
-          </div>
+            <strong>Entendendo Algoritmos</strong>
+            <span>Aditya Bhargava</span>
+            <p>
+              Semper et sapien proin vitae nisi. Feugiat neque integer donec et
+              aenean posuere amet ultrices. Cras fermentum id pulvinar varius
+              leo a in. Amet libero pharetra nunc elementum fringilla velit
+              ipsum. Sed vulputat?
+            </p>
+          </main>
         </BookCard>
       </Book>
     </Container>
