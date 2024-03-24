@@ -1,16 +1,40 @@
+import { Book, Rating, User } from '@prisma/client'
 import { Avatar } from '../Avatar'
 import { Stars } from '../Stars'
 import { BookCard, BookCardImage, Description } from './styles'
+import Link from 'next/link'
+import { formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale/pt-BR'
 
-export function RatingCard() {
+export type RatingAuthorAndBook = Rating & {
+  user: User
+  book: Book
+}
+
+type RatingCardProps = {
+  rating: RatingAuthorAndBook
+}
+
+export function RatingCard({ rating }: RatingCardProps) {
+  const distance = formatDistanceToNow(new Date(rating.created_at), {
+    locale: ptBR,
+    addSuffix: true,
+  })
+
   return (
     <BookCard>
       <header>
         <section>
-          <Avatar src="https://github.com/diaspd.png" alt="" size="md" />
+          <Link href={`/profile/${rating.user_id}`}>
+            <Avatar
+              src={rating.user.avatar_url!}
+              alt={rating.user.name}
+              size="md"
+            />
+          </Link>
           <div>
-            <span>Pedro Dias</span>
-            <p>Hoje</p>
+            <span>{rating.user.name}</span>
+            <p>{distance}</p>
           </div>
         </section>
 
@@ -20,27 +44,15 @@ export function RatingCard() {
       </header>
       <Description>
         <BookCardImage
-          src="https://github.com/diaspd.png"
+          src={rating.book.cover_url}
           width={108}
           height={152}
-          alt=""
+          alt={rating.book.name}
         />
         <div>
-          <strong>O Hobbit</strong>
-          <span>J.R.R Tolkien</span>
-          <p>
-            Semper et sapien proin vitae nisi. Feugiat neque integer donec et
-            aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo
-            a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed
-            vulputate massa velit nibh Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Quasi consequuntur voluptatum esse voluptas
-            molestias sed asperiores magni eligendi? Tempora mollitia repellat
-            hic? Nihil, obcaecati. Corrupti ullam deleniti dolorum libero Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Odit quidem cum
-            magni voluptate nisi velit numquam, impedit provident mollitia minus
-            excepturi sit asperiores, distinctio ex eligendi! Eius veritatis
-            quia doloribus? quam.
-          </p>
+          <strong>{rating.book.name}</strong>
+          <span>{rating.book.author}</span>
+          <p>{rating.book.summary}</p>
         </div>
       </Description>
     </BookCard>

@@ -18,9 +18,38 @@ const HomePage: NextPageWithLayout = () => {
           <Books>
             <span>Avaliações mais recentes</span>
 
-            <RatingCard />
-            <RatingCard />
-            <RatingCard />
+            {Array.from({ length: 10 }).map((_, i) => {
+              return (
+                <RatingCard
+                  key={i}
+                  rating={{
+                    id: 'aa',
+                    book_id: '55',
+                    description: 'fdsfds',
+                    user_id: '115',
+                    rate: 4,
+                    user: {
+                      name: 'Pedro D',
+                      avatar_url: 'https://github.com/diaspd.png',
+                      email: 'pedro@gmail.com',
+                      id: 'fdsfdsfsd',
+                      created_at: new Date(),
+                    },
+                    book: {
+                      author: 'John Doe',
+                      cover_url: 'https://github.com/diaspd.png',
+                      id: '2',
+                      name: 'Pedro Dias',
+                      summary:
+                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sint dolorem aspernatur qui quod eum ducimus excepturi ab doloremque, eveniet perferendis. Veniam ipsam maiores ducimus et. Iure, sapiente. Maiores, assumenda.',
+                      created_at: new Date(),
+                      total_pages: 5,
+                    },
+                    created_at: new Date(),
+                  }}
+                />
+              )
+            })}
           </Books>
         </StartContainer>
 
