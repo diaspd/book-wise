@@ -23,9 +23,7 @@ export function BookCardVariant() {
           <main>
             <header>
               <p>Há 2 dias</p>
-              <div>
-                <Stars />
-              </div>
+              <div>{/* <Stars /> */}</div>
             </header>
 
             <strong>Entendendo Algoritmos</strong>

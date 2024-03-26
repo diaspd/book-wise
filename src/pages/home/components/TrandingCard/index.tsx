@@ -31,9 +31,7 @@ export function TrandingCard() {
             <strong>A revolução dos bichos</strong>
             <span>George Orwell</span>
           </section>
-          <div>
-            <Stars />
-          </div>
+          <div>{/* <Stars /> */}</div>
         </BookContent>
       </ListBookCard>
       <ListBookCard>
@@ -48,9 +46,7 @@ export function TrandingCard() {
             <strong>A revolução dos bichos</strong>
             <span>George Orwell</span>
           </section>
-          <div>
-            <Stars />
-          </div>
+          <div>{/* <Stars /> */}</div>
         </BookContent>
       </ListBookCard>
     </TrendingContainer>
