@@ -20,7 +20,7 @@ export const Container = styled('aside', {
     'linear-gradient(190deg, rgba(2,0,36,0.4099811799719888) 0%, rgba(49,40,121,0.8357514880952381) 38%)',
 
   '@media (max-width: 864px)': {
-    width: '100%',
+    width: '90%',
     height: '50%',
     gap: '$4',
   },
@@ -94,6 +94,10 @@ export const SignInLink = styled(Link, {
   '&:hover': {
     color: '$gray100',
   },
+
+  '@media (max-width: 864px)': {
+    marginTop: '$6',
+  },
 })
 
 export const UserDetails = styled('div', {
@@ -108,5 +112,9 @@ export const UserDetails = styled('div', {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
+  },
+
+  '@media (max-width: 864px)': {
+    marginTop: '$6',
   },
 })

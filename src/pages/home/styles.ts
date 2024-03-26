@@ -14,6 +14,7 @@ export const Container = styled('div', {
   '@media (max-width: 864px)': {
     display: 'flex',
     padding: '$2 2rem',
+    height: '65rem',
     flexDirection: 'column',
   },
 })

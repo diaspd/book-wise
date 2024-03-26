@@ -9,6 +9,7 @@ export const Container = styled('div', {
 
   '@media (max-width: 864px)': {
     flexDirection: 'column',
+    padding: '$2',
   },
 })
 
@@ -34,9 +35,9 @@ export const Hero = styled('div', {
     'linear-gradient(190deg, rgba(2,0,36,0.4099811799719888) 0%, rgba(49,40,121,0.8357514880952381) 38%)',
 
   '@media (max-width: 864px)': {
-    width: '90%',
-    height: '20%',
-    margin: '$4',
+    width: 'auto',
+    height: '30%',
+    margin: '0 $2 $5 $2',
   },
 })
 
