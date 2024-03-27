@@ -1,12 +1,6 @@
 import { CaretRight } from 'phosphor-react'
-import {
-  BookContent,
-  ListBookCard,
-  SeeAllLink,
-  TrendingContainer,
-} from './styles'
-import { BookImage } from '../../styles'
-import { Stars } from '@/components/Stars'
+import { SeeAllLink, TrendingContainer } from './styles'
+import { BookCard } from '@/components/BookCard'
 
 export function TrendingBooks() {
   return (
@@ -19,21 +13,22 @@ export function TrendingBooks() {
         </SeeAllLink>
       </div>
 
-      <ListBookCard>
-        <BookImage
-          src="https://github.com/diaspd.png"
-          width={64}
-          height={94}
-          alt=""
+      <section>
+        <BookCard
+          book={{
+            author: 'John Doe',
+            cover_url: 'https://github.com/diaspd.png',
+            id: '1',
+            alreadyRead: true,
+            name: 'Clean Code',
+            total_pages: 50,
+            avgRating: 3,
+            created_at: new Date(),
+            summary: 'lorem',
+          }}
+          size="md"
         />
-        <BookContent>
-          <section>
-            <strong>A revolução dos bichos</strong>
-            <span>George Orwell</span>
-          </section>
-          <div>{/* <Stars /> */}</div>
-        </BookContent>
-      </ListBookCard>
+      </section>
     </TrendingContainer>
   )
 }

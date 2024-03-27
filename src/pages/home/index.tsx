@@ -49,6 +49,7 @@ const HomePage: NextPageWithLayout = () => {
             })}
           </Books>
         </StartContainer>
+
         <TrendingBooks />
       </Container>
     </>

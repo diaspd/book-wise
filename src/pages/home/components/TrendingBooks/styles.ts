@@ -23,6 +23,10 @@ export const TrendingContainer = styled('div', {
     width: '100%',
     margin: '$2',
   },
+
+  '> section': {
+    marginTop: '$3',
+  },
 })
 
 export const SeeAllLink = styled(Link, {
@@ -38,46 +42,5 @@ export const SeeAllLink = styled(Link, {
 
   '&:hover': {
     color: '$purple200',
-  },
-})
-
-export const ListBookCard = styled('section', {
-  display: 'flex',
-  padding: '$6',
-  gap: '$6',
-  margin: '$2 $5 $2 0',
-  width: '100%',
-  background: '$gray700',
-  borderRadius: '$md',
-  height: 135,
-
-  '@media (max-width: 864px)': {
-    flexDirection: 'column',
-    height: 'fit-content',
-    width: '100%',
-  },
-
-  '@media (max-width: 1400px)': {
-    height: 'fit-content',
-    flexDirection: 'column',
-  },
-})
-
-export const BookContent = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-
-  '> div': {
-    display: 'flex',
-  },
-
-  '> section': {
-    display: 'flex',
-    flexDirection: 'column',
-
-    '> span': {
-      color: '$gray400',
-    },
   },
 })
