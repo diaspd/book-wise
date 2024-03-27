@@ -43,12 +43,14 @@ export function RatingCard({ rating }: RatingCardProps) {
         </div>
       </header>
       <Description>
-        <BookCardImage
-          src={rating.book.cover_url}
-          width={108}
-          height={152}
-          alt={rating.book.name}
-        />
+        <Link href={`/explore?book=${rating.book_id}`}>
+          <BookCardImage
+            src={rating.book.cover_url}
+            width={108}
+            height={152}
+            alt={rating.book.name}
+          />
+        </Link>
         <div>
           <strong>{rating.book.name}</strong>
           <span>{rating.book.author}</span>

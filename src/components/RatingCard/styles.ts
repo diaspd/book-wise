@@ -80,4 +80,10 @@ export const BookCardImage = styled(Image, {
   marginRight: '$2',
   height: 152,
   width: 108,
+
+  transition: '0.2s',
+
+  '&:hover': {
+    filter: 'brightness(1.1)',
+  },
 })

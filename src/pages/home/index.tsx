@@ -39,7 +39,7 @@ const HomePage: NextPageWithLayout = () => {
                       author: 'John Doe',
                       cover_url: 'https://github.com/diaspd.png',
                       id: '2',
-                      name: 'Pedro Dias',
+                      name: 'Biografia',
                       summary:
                         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sint dolorem aspernatur qui quod eum ducimus excepturi ab doloremque, eveniet perferendis. Veniam ipsam maiores ducimus et. Iure, sapiente. Maiores, assumenda.',
                       created_at: new Date(),
