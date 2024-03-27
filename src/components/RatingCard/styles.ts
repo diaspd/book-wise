@@ -7,7 +7,7 @@ export const BookCard = styled('div', {
   flexDirection: 'column',
   background: '$gray700',
   borderRadius: '$md',
-  height: 290,
+  width: '100%',
 
   [`> div`]: {
     marginTop: '$8',
@@ -62,17 +62,6 @@ export const Description = styled('div', {
       width: '100%',
     },
   },
-
-  p: {
-    height: '88px',
-    overflow: 'hidden',
-    fontSize: '$sm',
-    lineHeight: '$base',
-    textOverflow: 'ellipsis',
-    display: '-webkit-box',
-    '-webkit-line-clamp': 4,
-    '-webkit-box-orient': 'vertical',
-  },
 })
 
 export const BookCardImage = styled(Image, {
@@ -86,4 +75,14 @@ export const BookCardImage = styled(Image, {
   '&:hover': {
     filter: 'brightness(1.1)',
   },
+})
+
+export const ShowMoreButton = styled('button', {
+  background: 'none',
+  border: 'none',
+  fontSize: '0.875rem',
+  color: '$purple100',
+  fontWeight: '$bold',
+  marginLeft: '$1',
+  fontFamily: 'inherit',
 })
