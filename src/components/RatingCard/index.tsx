@@ -62,7 +62,8 @@ export function RatingCard({ rating }: RatingCardProps) {
         </Link>
         <div>
           <strong>{rating.book.name}</strong>
-          <span>{rating.book.author}</span> {bookSummary}
+          <span>{rating.book.author}</span>
+          {bookSummary}
           {rating.book.summary.length > MAX_SUMMARY_LENGTH && (
             <ShowMoreButton onClick={toggleShowMore}>
               {isShowingMore ? 'ver menos' : 'ver mais'}

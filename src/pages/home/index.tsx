@@ -4,7 +4,7 @@ import { BookCardVariant } from './components/BookCardVariant'
 import { NextPageWithLayout } from '../_app'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { RatingCard } from '@/components/RatingCard'
-import { TrandingCard } from './components/TrandingCard'
+import { TrendingBooks } from './components/TrendingBooks'
 import { Header } from '@/components/Header'
 
 const HomePage: NextPageWithLayout = () => {
@@ -53,7 +53,7 @@ const HomePage: NextPageWithLayout = () => {
           </Books>
         </StartContainer>
 
-        <TrandingCard />
+        <TrendingBooks />
       </Container>
     </>
   )

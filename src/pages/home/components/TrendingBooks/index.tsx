@@ -8,7 +8,7 @@ import {
 import { BookImage } from '../../styles'
 import { Stars } from '@/components/Stars'
 
-export function TrandingCard() {
+export function TrendingBooks() {
   return (
     <TrendingContainer>
       <div>

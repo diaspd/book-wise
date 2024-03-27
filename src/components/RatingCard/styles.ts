@@ -56,7 +56,7 @@ export const Description = styled('div', {
 
   [`> div`]: {
     [`> span`]: {
-      marginBottom: '$3',
+      marginBottom: '$4',
       color: '$gray300',
       display: 'block',
       width: '100%',
