@@ -12,6 +12,7 @@ export const Container = styled('div', {
   transition: '0.2s',
   position: 'relative',
   overflow: 'hidden',
+  marginBottom: '$3',
 
   '&:hover': {
     borderColor: '$gray600',
