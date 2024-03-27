@@ -34,21 +34,6 @@ export function TrendingBooks() {
           <div>{/* <Stars /> */}</div>
         </BookContent>
       </ListBookCard>
-      <ListBookCard>
-        <BookImage
-          src="https://github.com/diaspd.png"
-          width={64}
-          height={94}
-          alt=""
-        />
-        <BookContent>
-          <section>
-            <strong>A revolução dos bichos</strong>
-            <span>George Orwell</span>
-          </section>
-          <div>{/* <Stars /> */}</div>
-        </BookContent>
-      </ListBookCard>
     </TrendingContainer>
   )
 }

@@ -1,6 +1,5 @@
 import { Container, StartContainer, Books } from './styles'
 
-import { BookCardVariant } from './components/BookCardVariant'
 import { NextPageWithLayout } from '../_app'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { RatingCard } from '@/components/RatingCard'
@@ -13,8 +12,6 @@ const HomePage: NextPageWithLayout = () => {
       <Header />
       <Container>
         <StartContainer>
-          <BookCardVariant />
-
           <Books>
             <span>Avaliações mais recentes</span>
 
@@ -52,7 +49,6 @@ const HomePage: NextPageWithLayout = () => {
             })}
           </Books>
         </StartContainer>
-
         <TrendingBooks />
       </Container>
     </>
