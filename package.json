@@ -9,6 +9,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
     "@next/font": "13.4.5",
     "@phosphor-icons/react": "^2.0.15",
@@ -29,6 +32,9 @@
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
-    "prisma": "^4.16.2"
+    "@types/uuid": "^9.0.8",
+    "prisma": "^4.16.2",
+    "ts-node": "^10.9.2",
+    "uuid": "^9.0.1"
   }
 }
