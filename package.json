@@ -33,6 +33,7 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
     "@types/uuid": "^9.0.8",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
     "prisma": "^4.16.2",
     "ts-node": "^10.9.2",
     "uuid": "^9.0.1"
