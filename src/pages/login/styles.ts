@@ -1,5 +1,6 @@
-import { keyframes, styled } from '../../styles/index'
 import Image from 'next/image'
+
+import { keyframes, styled } from '../../styles/index'
 
 export const Container = styled('div', {
   width: '100vw',
@@ -68,7 +69,7 @@ export const Button = styled('button', {
   backgroundColor: '$gray600',
   color: '$white',
   cursor: 'pointer',
-  transition: 'all 0.3s ease-in-out',
+  transition: 'all 0.2s ease-in-out',
   gap: '$4',
 
   '&:hover': {

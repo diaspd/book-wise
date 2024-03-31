@@ -1,5 +1,6 @@
-import { styled } from '@/styles'
 import Link from 'next/link'
+
+import { styled } from '@/styles'
 
 export const Container = styled('div', {
   display: 'grid',
@@ -71,7 +72,7 @@ export const StyledLink = styled(Link, {
   fontWeight: 'bold',
   borderLeft: `3px solid transparent`,
   borderRadius: '$xs',
-  transition: 'all 0.4s ease-in-out',
+  transition: 'all 0.2s ease-in-out',
 
   '&:hover': {
     color: '$gray100',

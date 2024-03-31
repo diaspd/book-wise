@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import { styled } from '@/styles/index'
 
 export const Container = styled('div', {

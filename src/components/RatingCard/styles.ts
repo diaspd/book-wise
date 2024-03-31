@@ -86,4 +86,10 @@ export const ShowMoreButton = styled('button', {
   fontWeight: '$bold',
   marginLeft: '$1',
   fontFamily: 'inherit',
+  transition: 'all 0.2s ease-in-out',
+
+  '&:hover': {
+    cursor: 'pointer',
+    color: '$purple200',
+  },
 })

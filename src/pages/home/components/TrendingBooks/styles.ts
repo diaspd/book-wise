@@ -1,5 +1,6 @@
-import { styled } from '@/styles'
 import Link from 'next/link'
+
+import { styled } from '@/styles'
 
 export const TrendingContainer = styled('div', {
   display: 'flex',
@@ -38,7 +39,7 @@ export const SeeAllLink = styled(Link, {
   textDecoration: 'none',
 
   fontWeight: 'bold',
-  transition: 'all 0.3s ease-out',
+  transition: 'all 0.2s ease-out',
 
   '&:hover': {
     color: '$purple200',

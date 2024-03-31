@@ -74,18 +74,3 @@ export const BookImage = styled(Image, {
   height: 94,
   width: 64,
 })
-
-export const SeeAllLink = styled(Link, {
-  color: '$purple100',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$3',
-  textDecoration: 'none',
-  fontWeight: 'bold',
-  transition: 'all 0.3s ease-out',
-
-  '&:hover': {
-    color: '$purple200',
-  },
-})
