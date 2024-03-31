@@ -1,12 +1,24 @@
-import { Container, StartContainer, Books } from './styles'
+import { useQuery } from '@tanstack/react-query'
+
+import { Header } from '@/components/Header'
+import { RatingAuthorAndBook, RatingCard } from '@/components/RatingCard'
+import { DefaultLayout } from '@/layouts/DefaultLayout'
+import { api } from '@/lib/axios'
 
 import { NextPageWithLayout } from '../_app'
-import { DefaultLayout } from '@/layouts/DefaultLayout'
-import { RatingCard } from '@/components/RatingCard'
 import { TrendingBooks } from './components/TrendingBooks'
-import { Header } from '@/components/Header'
+import { Books, Container, StartContainer } from './styles'
 
 const HomePage: NextPageWithLayout = () => {
+  const { data: ratings } = useQuery<RatingAuthorAndBook[]>({
+    queryKey: ['latest-ratings'],
+    queryFn: async () => {
+      const { data } = await api.get('/ratings/latest')
+
+      return data?.ratings ?? []
+    },
+  })
+
   return (
     <>
       <Header />
@@ -15,37 +27,8 @@ const HomePage: NextPageWithLayout = () => {
           <Books>
             <span>Avaliações mais recentes</span>
 
-            {Array.from({ length: 10 }).map((_, i) => {
-              return (
-                <RatingCard
-                  key={i}
-                  rating={{
-                    id: 'aa',
-                    book_id: '55',
-                    description: 'fdsfds',
-                    user_id: '115',
-                    rate: 4,
-                    user: {
-                      name: 'Pedro D',
-                      avatar_url: 'https://github.com/diaspd.png',
-                      email: 'pedro@gmail.com',
-                      id: 'fdsfdsfsd',
-                      created_at: new Date(),
-                    },
-                    book: {
-                      author: 'John Doe',
-                      cover_url: 'https://github.com/diaspd.png',
-                      id: '2',
-                      name: 'Biografia',
-                      summary:
-                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sint dolorem aspernatur qui quod eum ducimus excepturi ab doloremque, eveniet perferendis. Veniam iorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sint dolorem aspernatur qui quod eum ducimus excepturi auri ab doloremque, eveniet perferendis. Veniam iorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sint dolorem aspernatur qui quod eum ducimus excepturi ab doloremuri ab doloremque, eveniet perferendis. Veniam iorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sint dolorem aspernatur qui quod eum ducimus excepturi ab doloremb doloremque, psam maiores ducimus et. Iure, sapiente. Maiores, assumenda.',
-                      created_at: new Date(),
-                      total_pages: 5,
-                    },
-                    created_at: new Date(),
-                  }}
-                />
-              )
+            {ratings?.map((rating) => {
+              return <RatingCard key={rating.id} rating={rating} />
             })}
           </Books>
         </StartContainer>

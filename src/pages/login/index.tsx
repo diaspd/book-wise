@@ -2,10 +2,10 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
 
-import GithubImg from '../../assets/github.svg'
-import GoogleImg from '../../assets/google.svg'
+import GithubImg from '../../assets/icons/github.svg'
+import GoogleImg from '../../assets/icons/google.svg'
+import RocketImg from '../../assets/icons/rocket.svg'
 import HeroImage from '../../assets/logo.svg'
-import RocketImg from '../../assets/rocket.svg'
 import { Button, Container, Hero, HeroImg, LoginContainer } from './styles'
 
 type AuthButtonProps = {

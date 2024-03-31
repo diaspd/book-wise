@@ -9,6 +9,7 @@ const nextConfig = {
       'lh3.googleusercontent.com',
       'github.com',
       'avatars.githubusercontent.com',
+      'images.unsplash.com',
     ],
   },
 }

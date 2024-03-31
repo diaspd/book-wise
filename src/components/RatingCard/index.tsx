@@ -1,11 +1,13 @@
-import { formatDistanceToNow } from 'date-fns'
 import { Book, Rating, User } from '@prisma/client'
+import { formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale/pt-BR'
+import Link from 'next/link'
+
+import { useToggleShowMore } from '@/hooks/useToggleShowMore'
+
 import { Avatar } from '../Avatar'
 import { Stars } from '../Stars'
 import { BookCard, BookCardImage, Description, ShowMoreButton } from './styles'
-import Link from 'next/link'
-import { ptBR } from 'date-fns/locale/pt-BR'
-import { useToggleShowMore } from '@/hooks/useToggleShowMore'
 
 export type RatingAuthorAndBook = Rating & {
   user: User
