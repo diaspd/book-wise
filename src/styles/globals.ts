@@ -1,4 +1,5 @@
 import { nunito } from '@/pages/_app'
+
 import { globalCss } from './index'
 
 export const globalStyles = globalCss({

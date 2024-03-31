@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { styled } from '../../styles/index'
 import Link from 'next/link'
+
+import { styled } from '../../styles/index'
 
 export const Container = styled('div', {
   display: 'grid',
@@ -26,7 +27,7 @@ export const StartContainer = styled('main', {
   flexDirection: 'column',
   paddingTop: '$4',
 
-  paddingBottom: '5rem',
+  paddingBottom: '8rem',
 
   overflowY: 'auto',
   height: '100%',
@@ -51,7 +52,7 @@ export const Books = styled('div', {
   width: '100%',
 
   paddingRight: '$2',
-  paddingBottom: '$4',
+  marginBottom: '$8',
 
   gap: '$4',
 
