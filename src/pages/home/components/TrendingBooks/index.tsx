@@ -1,8 +1,21 @@
+import { useQuery } from '@tanstack/react-query'
 import { CaretRight } from 'phosphor-react'
+
+import { BookCard, BookWithAverageRating } from '@/components/BookCard'
+import { api } from '@/lib/axios'
+
 import { SeeAllLink, TrendingContainer } from './styles'
-import { BookCard } from '@/components/BookCard'
 
 export function TrendingBooks() {
+  const { data: trendingBooks } = useQuery<BookWithAverageRating[]>({
+    queryKey: ['trending-books'],
+    queryFn: async () => {
+      const { data } = await api.get('/books/popular')
+
+      return data?.books ?? []
+    },
+  })
+
   return (
     <TrendingContainer>
       <div>
@@ -14,24 +27,8 @@ export function TrendingBooks() {
       </div>
 
       <section>
-        {Array.from({ length: 4 }).map((_, i) => {
-          return (
-            <BookCard
-              key={i}
-              book={{
-                author: 'John Doe',
-                cover_url: 'https://github.com/diaspd.png',
-                id: '1',
-                alreadyRead: true,
-                name: 'Clean Code',
-                total_pages: 50,
-                avgRating: 3,
-                created_at: new Date(),
-                summary: 'lorem',
-              }}
-              size="md"
-            />
-          )
+        {trendingBooks?.map((book) => {
+          return <BookCard key={`popular-${book.id}`} book={book} size="md" />
         })}
       </section>
     </TrendingContainer>
