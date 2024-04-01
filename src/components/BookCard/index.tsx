@@ -1,7 +1,15 @@
 import { Book } from '@prisma/client'
 
+import { RatingsModal } from '@/pages/explore/components/RatingsModal'
+
 import { Stars } from '../Stars'
-import { BookDetails, BookImage, BookName, Container } from './styles'
+import {
+  BookDetails,
+  BookImage,
+  BookName,
+  Container,
+  ReadBadge,
+} from './styles'
 
 export type BookWithAverageRating = Book & {
   avgRating: number
@@ -26,8 +34,10 @@ export const BookCard = ({ book, size = 'md' }: BookCardProps) => {
   }
 
   return (
-    <div>
+    <RatingsModal>
       <Container>
+        {book?.alreadyRead && <ReadBadge>LIDO</ReadBadge>}
+
         <BookImage
           width={IMAGE_SIZES[size].width}
           height={IMAGE_SIZES[size].height}
@@ -43,6 +53,6 @@ export const BookCard = ({ book, size = 'md' }: BookCardProps) => {
           <Stars rating={book.avgRating} />
         </BookDetails>
       </Container>
-    </div>
+    </RatingsModal>
   )
 }
