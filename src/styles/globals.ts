@@ -16,7 +16,6 @@ export const globalStyles = globalCss({
   body: {
     backgroundColor: '$gray800',
     color: '$gray100',
-    fontFamily: 'Nunito',
     '-webkit-font-smoothing': 'antialiased',
     '::-webkit-scrollbar': { width: '.4rem' },
     '::-webkit-scrollbar-thumb': {
@@ -27,7 +26,7 @@ export const globalStyles = globalCss({
   },
 
   'body, input, textarea, button': {
-    fontFamily: 'Nunito',
+    fontFamily: 'inherit',
     fontWeight: 400,
   },
 })

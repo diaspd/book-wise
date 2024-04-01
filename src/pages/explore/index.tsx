@@ -2,6 +2,7 @@ import { Binoculars, MagnifyingGlass } from '@phosphor-icons/react'
 import { ReactElement, useState } from 'react'
 
 import { BookCard } from '@/components/BookCard'
+import { Input } from '@/components/Input'
 import { PageTitle } from '@/components/PageTitle'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 
@@ -17,12 +18,12 @@ const ExplorePage: NextPageWithLayout = () => {
         <PageTitle title="Explorar" icon={<Binoculars size={32} />} />
 
         <div>
-          <input
+          <Input
             placeholder="Buscar livro ou autor"
+            icon={<MagnifyingGlass size={20} />}
             value={search}
             onChange={({ target }) => setSearch(target.value)}
           />
-          <MagnifyingGlass size={20} />
         </div>
       </header>
 

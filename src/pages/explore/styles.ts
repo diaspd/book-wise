@@ -10,6 +10,11 @@ export const ExploreContainer = styled('section', {
   '> header': {
     display: 'flex',
     justifyContent: 'space-between',
+
+    '> div': {
+      width: '100%',
+      maxWidth: '433px',
+    },
   },
 })
 
