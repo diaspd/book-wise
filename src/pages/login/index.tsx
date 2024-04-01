@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
@@ -27,6 +28,9 @@ export default function Login({ callbackUrl = '/' }: AuthButtonProps) {
 
   return (
     <Container>
+      <Head>
+        <title>Login | BookWise</title>
+      </Head>
       <Hero>
         <HeroImg src={HeroImage} width={232} height={58} alt="Book Wise" />
       </Hero>
