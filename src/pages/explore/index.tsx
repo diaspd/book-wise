@@ -3,7 +3,7 @@ import { Category } from '@prisma/client'
 import { useQuery } from '@tanstack/react-query'
 import { ReactElement, useState } from 'react'
 
-import { BookCard } from '@/components/BookCard'
+import { BookCard, BookWithAverageRating } from '@/components/BookCard'
 import { Input } from '@/components/Input'
 import { PageTitle } from '@/components/PageTitle'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
@@ -28,6 +28,18 @@ const ExplorePage: NextPageWithLayout = () => {
     },
   })
 
+  const { data: books } = useQuery<BookWithAverageRating[]>({
+    queryKey: ['books', isCategorySelected],
+    queryFn: async () => {
+      const { data } = await api.get('/books', {
+        params: {
+          category: isCategorySelected,
+        },
+      })
+      return data?.books ?? []
+    },
+  })
+
   return (
     <ExploreContainer>
       <header>
@@ -44,6 +56,15 @@ const ExplorePage: NextPageWithLayout = () => {
       </header>
 
       <TagsContainer>
+        <Tag
+          active={isCategorySelected === null}
+          onClick={() => {
+            setIsCategorySelected(null)
+          }}
+        >
+          Tudo
+        </Tag>
+
         {categories?.map((category) => (
           <Tag
             key={category.id}
@@ -56,23 +77,7 @@ const ExplorePage: NextPageWithLayout = () => {
       </TagsContainer>
 
       <BooksGrid>
-        {Array.from({ length: 10 }).map((_, i) => (
-          <BookCard
-            key={i}
-            size="lg"
-            book={{
-              author: 'John Doe',
-              id: '1',
-              created_at: new Date(),
-              summary: 'lorem',
-              total_pages: 350,
-              avgRating: 3,
-              name: 'Code',
-              alreadyRead: true,
-              cover_url: 'https://github.com/diaspd.png',
-            }}
-          />
-        ))}
+        {books?.map((book) => <BookCard key={book.id} size="lg" book={book} />)}
       </BooksGrid>
     </ExploreContainer>
   )
