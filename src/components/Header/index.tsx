@@ -1,4 +1,5 @@
 import { ChartLineUp } from 'phosphor-react'
+
 import { PageTitle } from '../PageTitle'
 import { TitleContainer } from './styles'
 

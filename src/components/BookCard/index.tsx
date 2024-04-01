@@ -1,4 +1,5 @@
 import { Book } from '@prisma/client'
+
 import { Stars } from '../Stars'
 import { BookDetails, BookImage, BookName, Container } from './styles'
 

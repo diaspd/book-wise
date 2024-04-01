@@ -1,20 +1,19 @@
 import Image from 'next/image'
-
+import { useRouter } from 'next/router'
+import { signOut, useSession } from 'next-auth/react'
 import { Binoculars, ChartLineUp, SignIn, SignOut, User } from 'phosphor-react'
-import HeroImg from '../../assets/logo.svg'
 
+import { Avatar } from '@/components/Avatar'
+
+import HeroImg from '../../assets/logo.svg'
 import {
+  Container,
   LinkContainer,
   LogoImg,
-  Container,
   SignInLink,
   StyledLink,
   UserDetails,
 } from './styles'
-
-import { signOut, useSession } from 'next-auth/react'
-import { Avatar } from '@/components/Avatar'
-import { useRouter } from 'next/router'
 
 export function Sidebar() {
   const router = useRouter()
@@ -33,7 +32,7 @@ export function Sidebar() {
         </LogoImg>
 
         <LinkContainer>
-          <StyledLink href="/" title="Start" active>
+          <StyledLink href="/" title="Início" active={router.asPath === '/'}>
             <ChartLineUp size={24} />
             <span>Início</span>
           </StyledLink>
