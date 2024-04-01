@@ -7,6 +7,7 @@ import { PageTitle } from '@/components/PageTitle'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 
 import { NextPageWithLayout } from '../_app'
+import { Tag } from './components/Tags'
 import { BooksGrid, ExploreContainer, TagsContainer } from './styles'
 
 const ExplorePage: NextPageWithLayout = () => {
@@ -27,7 +28,12 @@ const ExplorePage: NextPageWithLayout = () => {
         </div>
       </header>
 
-      <TagsContainer></TagsContainer>
+      <TagsContainer>
+        <Tag active>Tudo</Tag>
+        {Array.from({ length: 10 }).map((_, i) => (
+          <Tag key={i}>{i + 100}</Tag>
+        ))}
+      </TagsContainer>
 
       <BooksGrid>
         {Array.from({ length: 10 }).map((_, i) => (
