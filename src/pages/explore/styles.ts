@@ -11,9 +11,18 @@ export const ExploreContainer = styled('section', {
     display: 'flex',
     justifyContent: 'space-between',
 
+    '@media (max-width: 864px)': {
+      flexDirection: 'column',
+      padding: '0 $6',
+    },
+
     '> div': {
       width: '100%',
       maxWidth: '433px',
+
+      '@media (max-width: 864px)': {
+        marginTop: '$4',
+      },
     },
   },
 })
@@ -24,6 +33,10 @@ export const TagsContainer = styled('div', {
   gap: '$3',
   marginTop: 40,
   marginBottom: 48,
+
+  '@media (max-width: 864px)': {
+    padding: '0 $6',
+  },
 })
 
 export const BooksGrid = styled('div', {
@@ -37,5 +50,11 @@ export const BooksGrid = styled('div', {
 
   '&::-webkit-scrollbar': {
     display: 'none',
+  },
+
+  '@media (max-width: 864px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '0 $6',
   },
 })
