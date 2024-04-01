@@ -40,6 +40,13 @@ const ExplorePage: NextPageWithLayout = () => {
     },
   })
 
+  const filteredBooks = books?.filter((book) => {
+    return (
+      book.name.toLowerCase().includes(search.toLowerCase()) ||
+      book.author.toLowerCase().includes(search.toLowerCase())
+    )
+  })
+
   return (
     <ExploreContainer>
       <header>
@@ -77,7 +84,9 @@ const ExplorePage: NextPageWithLayout = () => {
       </TagsContainer>
 
       <BooksGrid>
-        {books?.map((book) => <BookCard key={book.id} size="lg" book={book} />)}
+        {filteredBooks?.map((book) => (
+          <BookCard key={book.id} size="lg" book={book} />
+        ))}
       </BooksGrid>
     </ExploreContainer>
   )
