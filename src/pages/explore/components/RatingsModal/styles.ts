@@ -74,6 +74,16 @@ export const BookContent = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
+
+  '> div': {
+    '> span': {
+      color: '$gray300',
+    },
+    '> p': {
+      color: '$gray400',
+      margin: '$1 0',
+    },
+  },
 })
 
 export const BookInfos = styled('div', {

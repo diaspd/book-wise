@@ -1,7 +1,11 @@
-import { X } from '@phosphor-icons/react'
+import { BookmarkSimple, X } from '@phosphor-icons/react'
 import * as Dialog from '@radix-ui/react-dialog'
+import { BookOpen } from 'phosphor-react'
 import { ReactNode } from 'react'
 
+import { Stars } from '@/components/Stars'
+
+import { BookInfo } from './BookInfo'
 import {
   BookContent,
   BookDetailsContainer,
@@ -29,21 +33,33 @@ export function RatingsModal({ children }: RatingsModalProps) {
           </DialogClose>
           <BookDetailsWrapper>
             <BookDetailsContainer>
-              <BookImage width={171} height={242} alt="" src="" />
+              <BookImage
+                width={171}
+                height={242}
+                alt=""
+                src="https://github.com/diaspd.png"
+              />
               <BookContent>
                 <div>
                   <h2>O Hobbit</h2>
-                  <span color="gray-300">Tolkien</span>
+                  <span>Tolkien</span>
                 </div>
 
                 <div>
-                  {/* <Stars rating={book.avgRating} size="md" /> */}
-                  <span color="gray-400">3 avaliações</span>
+                  <Stars rating={4} size="md" />
+                  <p>3 avaliações</p>
                 </div>
               </BookContent>
             </BookDetailsContainer>
 
-            <BookInfos></BookInfos>
+            <BookInfos>
+              <BookInfo
+                icon={<BookmarkSimple />}
+                title="Categorias"
+                info="Ficção, Ação"
+              />
+              <BookInfo icon={<BookOpen />} title="Páginas" info="350" />
+            </BookInfos>
           </BookDetailsWrapper>
         </DialogContent>
       </Dialog.Portal>

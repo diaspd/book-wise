@@ -57,8 +57,7 @@ export const BooksGrid = styled('div', {
   },
 
   '@media (max-width: 864px)': {
-    display: 'flex',
-    flexDirection: 'column',
+    gridTemplateColumns: 'repeat(1, 1fr)',
     padding: '0 $6',
   },
 })
