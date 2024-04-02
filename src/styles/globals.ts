@@ -19,10 +19,10 @@ export const globalStyles = globalCss({
     '-webkit-font-smoothing': 'antialiased',
     '::-webkit-scrollbar': { width: '.4rem' },
     '::-webkit-scrollbar-thumb': {
-      backgroundColor: '$gray300',
+      backgroundColor: '$gray600',
       borderRadius: '.5rem',
     },
-    '::-webkit-track': { backgroundColor: '$gray800' },
+    '::-webkit-track': { backgroundColor: '$gray700' },
   },
 
   'body, input, textarea, button': {

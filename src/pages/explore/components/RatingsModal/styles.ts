@@ -22,16 +22,11 @@ export const DialogContent = styled(Dialog.Content, {
   flexDirection: 'column',
   overflowY: 'auto',
 
-  '&::-webkit-scrollbar': {
-    width: 6,
-  },
-
-  '&::-webkit-scrollbar-track': {
-    background: '$gray700',
-  },
-
-  '&::-webkit-scrollbar-thumb': {
-    background: '$gray600',
+  '@media (max-width: 864px)': {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    overflow: 'hidden',
   },
 })
 
