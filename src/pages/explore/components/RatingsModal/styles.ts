@@ -26,7 +26,7 @@ export const DialogContent = styled(Dialog.Content, {
     display: 'flex',
     alignItems: 'center',
     width: '100%',
-    overflow: 'hidden',
+    overflowX: 'hidden',
   },
 })
 

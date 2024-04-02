@@ -1,14 +1,16 @@
-import { Container, Content } from './styles'
-import { ReactNode } from 'react'
 import Head from 'next/head'
+import { ReactNode } from 'react'
+
 import { Sidebar } from '@/components/Sidebar'
+
+import { Container, Content } from './styles'
 
 type DefaultLayoutProps = {
   children: ReactNode
   title: string
 }
 
-export const DefaultLayout = ({ children, title }: DefaultLayoutProps) => {
+export function DefaultLayout({ children, title }: DefaultLayoutProps) {
   return (
     <Container>
       <Head>

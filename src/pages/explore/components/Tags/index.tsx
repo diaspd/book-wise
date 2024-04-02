@@ -8,7 +8,7 @@ type TagProps = ComponentProps<typeof Container> & {
   active?: boolean
 }
 
-export const Tag = ({ children, active, ...props }: TagProps) => {
+export function Tag({ children, active, ...props }: TagProps) {
   return (
     <Container active={active} {...props}>
       {children}

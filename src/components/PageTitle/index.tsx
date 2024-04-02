@@ -8,7 +8,7 @@ type PageTitleProps = ComponentProps<typeof Container> & {
   title: string
 }
 
-export const PageTitle = ({ title, icon, ...props }: PageTitleProps) => {
+export function PageTitle({ title, icon, ...props }: PageTitleProps) {
   return (
     <Container {...props}>
       {icon}

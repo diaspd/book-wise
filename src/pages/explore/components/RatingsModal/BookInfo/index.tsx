@@ -8,7 +8,7 @@ type BookInfoProps = {
   info: string
 }
 
-export const BookInfo = ({ icon, title, info }: BookInfoProps) => {
+export function BookInfo({ icon, title, info }: BookInfoProps) {
   return (
     <Container>
       {icon}

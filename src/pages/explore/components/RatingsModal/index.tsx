@@ -6,6 +6,7 @@ import { ReactNode } from 'react'
 import { Stars } from '@/components/Stars'
 
 import { BookInfo } from './BookInfo'
+import { BookRatings } from './BookRatings'
 import {
   BookContent,
   BookDetailsContainer,
@@ -61,6 +62,8 @@ export function RatingsModal({ children }: RatingsModalProps) {
               <BookInfo icon={<BookOpen />} title="Páginas" info="350" />
             </BookInfos>
           </BookDetailsWrapper>
+
+          <BookRatings />
         </DialogContent>
       </Dialog.Portal>
     </Dialog.Root>

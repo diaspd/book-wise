@@ -1,5 +1,6 @@
-import { styled } from '@/styles'
 import Image from 'next/image'
+
+import { styled } from '@/styles'
 
 export const Container = styled('div', {
   borderRadius: '$full',

@@ -21,7 +21,7 @@ type BookCardProps = {
   size?: 'md' | 'lg'
 }
 
-export const BookCard = ({ book, size = 'md' }: BookCardProps) => {
+export function BookCard({ book, size = 'md' }: BookCardProps) {
   const IMAGE_SIZES = {
     md: {
       width: 64,

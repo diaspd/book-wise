@@ -6,7 +6,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   icon?: ReactNode
 }
 
-export const Input = ({ icon, ...props }: InputProps) => {
+export function Input({ icon, ...props }: InputProps) {
   return (
     <InputContainer>
       <input {...props} />
