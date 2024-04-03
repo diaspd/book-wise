@@ -38,7 +38,8 @@ export function Form({ bookId, onCancel }: FormProps) {
       })
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['book'] })
+      queryClient.invalidateQueries({ queryKey: ['book', bookId] })
+      queryClient.invalidateQueries({ queryKey: ['books'] })
       onCancel()
     },
   })
