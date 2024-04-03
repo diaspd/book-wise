@@ -52,11 +52,22 @@ export const BookDetailsWrapper = styled('div', {
   background: '$gray700',
   padding: '$6 $8',
   borderRadius: '$md',
+  minWidth: '250px',
+
+  '@media (max-width: 864px)': {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+  },
 })
 
 export const BookDetailsContainer = styled('div', {
   display: 'flex',
   gap: '$8',
+
+  '@media (max-width: 500px)': {
+    flexDirection: 'column',
+  },
 })
 
 export const BookImage = styled(Image, {
@@ -79,6 +90,10 @@ export const BookContent = styled('div', {
       margin: '$1 0',
     },
   },
+
+  '@media (max-width: 500px)': {
+    gap: '$10',
+  },
 })
 
 export const BookInfos = styled('div', {
@@ -87,4 +102,8 @@ export const BookInfos = styled('div', {
   borderTop: '1px solid $gray600',
   display: 'flex',
   gap: 60,
+
+  '@media (max-width: 500px)': {
+    flexDirection: 'column',
+  },
 })
