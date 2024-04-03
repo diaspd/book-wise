@@ -34,7 +34,7 @@ export function BookCard({ book, size = 'md' }: BookCardProps) {
   }
 
   return (
-    <RatingsModal>
+    <RatingsModal bookId={book?.id}>
       <Container>
         {book?.alreadyRead && <ReadBadge>LIDO</ReadBadge>}
 
