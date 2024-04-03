@@ -23,35 +23,6 @@ export const FormContainer = styled('form', {
   flexDirection: 'column',
   gap: '$3',
   marginTop: '$6',
-
-  '> textarea': {
-    flex: 1,
-    padding: '0.875rem $5',
-    color: '$gray100',
-    fontSize: '0.875rem',
-    resize: 'none',
-    minHeight: '136px',
-
-    '&::placeholder': {
-      color: '$gray400',
-    },
-
-    '&:focus': {
-      outline: 'none',
-    },
-
-    background: '$gray800',
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    borderRadius: 4,
-    transition: '0.2s',
-    border: '1px solid $gray800',
-
-    '&:focus-within': {
-      border: '1px solid $green200',
-    },
-  },
 })
 
 export const ActionsContainer = styled('div', {

@@ -4,6 +4,7 @@ import { FormEvent, useState } from 'react'
 
 import { Avatar } from '@/components/Avatar'
 import { Stars } from '@/components/Stars'
+import { TextArea } from '@/components/TextArea'
 
 import {
   ActionsContainer,
@@ -48,7 +49,7 @@ export function Form({ bookId, onCancel }: FormProps) {
       )}
 
       <FormContainer onSubmit={handleSubmit}>
-        <textarea
+        <TextArea
           placeholder="Escreva sua avaliação"
           maxLength={450}
           value={description}
