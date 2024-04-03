@@ -1,10 +1,12 @@
 import { Check, X } from '@phosphor-icons/react'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useSession } from 'next-auth/react'
 import { FormEvent, useState } from 'react'
 
 import { Avatar } from '@/components/Avatar'
 import { Stars } from '@/components/Stars'
 import { TextArea } from '@/components/TextArea'
+import { api } from '@/lib/axios'
 
 import {
   ActionsContainer,
@@ -26,13 +28,27 @@ export function Form({ bookId, onCancel }: FormProps) {
   const [description, setDescription] = useState('')
   const [currentRate, setCurrentRate] = useState(0)
 
+  const queryClient = useQueryClient()
+
+  const { mutateAsync: handleRate } = useMutation({
+    mutationFn: async () => {
+      await api.post(`/books/${bookId}/rate`, {
+        description,
+        rate: currentRate,
+      })
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['book'] })
+      onCancel()
+    },
+  })
+
   const submitDisabled = !description.trim() || !currentRate
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault()
-    if (submitDisabled) {
-      console.log('')
-    }
+    if (submitDisabled) return
+    await handleRate()
   }
 
   return (
