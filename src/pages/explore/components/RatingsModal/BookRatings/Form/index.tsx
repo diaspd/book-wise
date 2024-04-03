@@ -44,7 +44,7 @@ export function Form({ bookId, onCancel }: FormProps) {
             <h2>{user.name}</h2>
           </section>
 
-          <Stars size="lg" rating={currentRate} />
+          <Stars size="lg" rating={currentRate} setRating={setCurrentRate} />
         </UserDetails>
       )}
 
