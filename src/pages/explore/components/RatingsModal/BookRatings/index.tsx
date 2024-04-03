@@ -43,25 +43,8 @@ export function BookRatings({ bookId, ratings }: BookRatingsProps) {
         {showForm && (
           <Form bookId={bookId} onCancel={() => setShowForm(false)} />
         )}
-        {Array.from({ length: 3 }).map((_, i) => (
-          <UserCard
-            key={i}
-            rating={{
-              rate: 3,
-              id: '1',
-              book_id: '1',
-              user_id: '1',
-              description: 'lorem',
-              user: {
-                name: 'John Doe',
-                email: 'johndoe@example.com',
-                created_at: new Date(),
-                id: '1',
-                avatar_url: 'https://github.com/diaspd.png',
-              },
-              created_at: new Date(),
-            }}
-          />
+        {ratings.map((rating) => (
+          <UserCard key={rating.id} rating={rating} />
         ))}
       </section>
     </Container>

@@ -21,6 +21,7 @@ export const UserDetails = styled('div', {
   alignItems: 'start',
   justifyContent: 'space-between',
   marginBottom: '$5',
+  minWidth: '200px',
 
   '> section': {
     display: 'flex',
@@ -30,6 +31,14 @@ export const UserDetails = styled('div', {
       '> strong': {
         display: 'block',
       },
+
+      '@media (max-width: 400px)': {
+        paddingBottom: '$4',
+      },
     },
+  },
+
+  '@media (max-width: 400px)': {
+    flexDirection: 'column',
   },
 })
