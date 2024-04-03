@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { Fragment, useState } from 'react'
 
@@ -27,16 +28,10 @@ export function BookRatings({ bookId, ratings }: BookRatingsProps) {
     <Container>
       <header>
         <span>Avaliações</span>
-        {/* {canRate && (
-          <RatingWrapper>
-            <Link
-              withoutIcon
-              onClick={handleRate}
-              text="Avaliar"
-              color="purple"
-            />
-          </RatingWrapper>
-        )} */}
+
+        <RatingWrapper>
+          <button onClick={handleRate}>Avaliar</button>
+        </RatingWrapper>
       </header>
 
       <section>

@@ -43,7 +43,7 @@ export function Form({ bookId, onCancel }: FormProps) {
             <h2>{user.name}</h2>
           </section>
 
-          <Stars size="lg" rating={currentRate} setRating={setCurrentRate} />
+          <Stars size="lg" rating={currentRate} />
         </UserDetails>
       )}
 
@@ -56,11 +56,11 @@ export function Form({ bookId, onCancel }: FormProps) {
         />
         <ActionsContainer>
           <button onClick={onCancel}>
-            <X />
+            <X color="#8381D9" />
           </button>
 
           <button disabled={submitDisabled}>
-            <Check />
+            <Check color="#50B2C0" />
           </button>
         </ActionsContainer>
       </FormContainer>

@@ -103,7 +103,7 @@ export function RatingsModal({ bookId, children }: RatingsModalProps) {
                 </BookInfos>
               </BookDetailsWrapper>
 
-              <BookRatings ratings={book.ratings} />
+              <BookRatings bookId={bookId} ratings={book.ratings} />
             </>
           )}
         </DialogContent>

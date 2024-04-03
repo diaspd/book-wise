@@ -10,6 +10,22 @@ export const Container = styled('section', {
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: '$4',
+
+    '> button': {
+      background: 'none',
+      border: 'none',
+      fontSize: '0.875rem',
+      color: '$purple100',
+      fontWeight: '$bold',
+      marginLeft: '$1',
+      fontFamily: 'inherit',
+      transition: 'all 0.2s ease-in-out',
+
+      '&:hover': {
+        cursor: 'pointer',
+        color: '$purple200',
+      },
+    },
   },
 
   '> section': {
