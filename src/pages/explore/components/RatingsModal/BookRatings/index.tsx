@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { Fragment, useState } from 'react'
 
@@ -19,6 +18,12 @@ export function BookRatings({ bookId, ratings }: BookRatingsProps) {
   const isAuthenticated = status === 'authenticated'
   const RatingWrapper = isAuthenticated ? Fragment : LoginModal
 
+  const sortedRatingsByCreationDate = ratings.sort((a, b) => {
+    return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+  })
+
+  const canRate = ratings.every((x) => x.user_id !== session?.user?.id)
+
   const handleRate = () => {
     if (!isAuthenticated) return
     setShowForm(true)
@@ -29,16 +34,18 @@ export function BookRatings({ bookId, ratings }: BookRatingsProps) {
       <header>
         <span>Avaliações</span>
 
-        <RatingWrapper>
-          <button onClick={handleRate}>Avaliar</button>
-        </RatingWrapper>
+        {canRate && (
+          <RatingWrapper>
+            <button onClick={handleRate}>Avaliar</button>
+          </RatingWrapper>
+        )}
       </header>
 
       <section>
         {showForm && (
           <Form bookId={bookId} onCancel={() => setShowForm(false)} />
         )}
-        {ratings.map((rating) => (
+        {sortedRatingsByCreationDate.map((rating) => (
           <UserCard key={rating.id} rating={rating} />
         ))}
       </section>

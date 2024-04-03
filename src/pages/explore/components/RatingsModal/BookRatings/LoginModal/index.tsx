@@ -26,12 +26,14 @@ export function LoginModal({ children }: LoginDialogProps) {
           </DialogClose>
 
           <div>
-            <h2>Faça login para deixar sua avaliação</h2>
-            <AuthButtons
-              callbackUrl={
-                paramBookId ? `/explore?book=${paramBookId}` : '/explore'
-              }
-            />
+            <span>Faça login para deixar sua avaliação</span>
+            <div style={{ paddingTop: '40px' }}>
+              <AuthButtons
+                callbackUrl={
+                  paramBookId ? `/explore?book=${paramBookId}` : '/explore'
+                }
+              />
+            </div>
           </div>
         </DialogContent>
       </Dialog.Portal>

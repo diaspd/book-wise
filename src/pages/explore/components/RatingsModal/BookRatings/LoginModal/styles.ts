@@ -23,6 +23,11 @@ export const DialogContent = styled(Dialog.Content, {
     maxWidth: 372,
     margin: '0 auto',
     textAlign: 'center',
+
+    '> span': {
+      color: '$gray200',
+      fontSize: '$lg',
+    },
   },
 })
 

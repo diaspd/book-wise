@@ -43,42 +43,23 @@ export const Hero = styled('div', {
 })
 
 export const LoginContainer = styled('div', {
+  width: '100%',
+  maxWidth: '372px',
+  margin: '0 auto',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  marginRight: '20%',
-  gap: '$4',
+  paddingLeft: 20,
+
+  section: {
+    marginTop: 40,
+  },
 
   p: {
-    marginTop: '-$4',
-    marginBottom: '$8',
+    color: '$gray200',
   },
 
   '@media (max-width: 864px)': {
     margin: '$2',
-  },
-})
-
-export const Button = styled('button', {
-  all: 'unset',
-  display: 'flex',
-  padding: '$5',
-  alignItems: 'center',
-  width: '372px',
-  borderRadius: '$md',
-  backgroundColor: '$gray600',
-  color: '$white',
-  cursor: 'pointer',
-  transition: 'all 0.2s ease-in-out',
-  gap: '$4',
-
-  '&:hover': {
-    backgroundColor: '$gray700',
-    color: '$white',
-  },
-
-  '@media (max-width: 864px)': {
-    width: '90%',
-    marginBottom: '$2',
   },
 })

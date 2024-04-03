@@ -8,6 +8,7 @@ export const Container = styled('section', {
 
 export const AuthButton = styled('button', {
   width: '100%',
+  maxWidth: '372px',
   height: 72,
   background: '$gray600',
   border: 'none',
@@ -23,5 +24,10 @@ export const AuthButton = styled('button', {
 
   '&:hover': {
     background: '$gray500',
+  },
+
+  '@media (max-width: 864px)': {
+    width: '90%',
+    marginBottom: '$2',
   },
 })
