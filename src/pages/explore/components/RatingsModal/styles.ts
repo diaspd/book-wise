@@ -67,6 +67,7 @@ export const BookDetailsContainer = styled('div', {
 
   '@media (max-width: 500px)': {
     flexDirection: 'column',
+    alignItems: 'center',
   },
 })
 
@@ -102,8 +103,15 @@ export const BookInfos = styled('div', {
   borderTop: '1px solid $gray600',
   display: 'flex',
   gap: 60,
+  width: '100%',
 
-  '@media (max-width: 500px)': {
-    flexDirection: 'column',
+  '> div': {
+    display: 'flex',
+    gap: 60,
+
+    '@media (max-width: 500px)': {
+      flexDirection: 'column',
+      marginRight: 'auto',
+    },
   },
 })

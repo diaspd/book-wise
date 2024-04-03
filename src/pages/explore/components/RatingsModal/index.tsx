@@ -90,16 +90,18 @@ export function RatingsModal({ bookId, children }: RatingsModalProps) {
                 </BookDetailsContainer>
 
                 <BookInfos>
-                  <BookInfo
-                    icon={<BookmarkSimple />}
-                    title="Categorias"
-                    info={categoriesFormated}
-                  />
-                  <BookInfo
-                    icon={<BookOpen />}
-                    title="Páginas"
-                    info={String(book.total_pages)}
-                  />
+                  <div>
+                    <BookInfo
+                      icon={<BookmarkSimple />}
+                      title="Categorias"
+                      info={categoriesFormated}
+                    />
+                    <BookInfo
+                      icon={<BookOpen />}
+                      title="Páginas"
+                      info={String(book.total_pages)}
+                    />
+                  </div>
                 </BookInfos>
               </BookDetailsWrapper>
 

@@ -4,6 +4,7 @@ export const Container = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   marginTop: 40,
+  width: '100%',
 
   '> header': {
     display: 'flex',

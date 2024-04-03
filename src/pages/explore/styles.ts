@@ -25,6 +25,11 @@ export const ExploreContainer = styled('section', {
       },
     },
   },
+
+  '@media (max-width: 864px)': {
+    padding: '$2 2rem',
+    height: '60rem',
+  },
 })
 
 export const TagsContainer = styled('div', {

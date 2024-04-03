@@ -3,6 +3,7 @@ import { styled } from '@/styles/index'
 export const Container = styled('div', {
   padding: '$6',
   borderRadius: 8,
+  minWidth: '250px',
 
   variants: {
     variant: {
@@ -21,7 +22,6 @@ export const UserDetails = styled('div', {
   alignItems: 'start',
   justifyContent: 'space-between',
   marginBottom: '$5',
-  minWidth: '200px',
 
   '> section': {
     display: 'flex',

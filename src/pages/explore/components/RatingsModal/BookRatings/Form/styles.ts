@@ -4,6 +4,7 @@ export const Container = styled('div', {
   background: '$gray700',
   padding: '$6',
   borderRadius: 8,
+  minWidth: '250px',
 })
 
 export const UserDetails = styled('div', {
@@ -14,6 +15,12 @@ export const UserDetails = styled('div', {
   '> section': {
     display: 'flex',
     alignItems: 'center',
+    gap: '$4',
+  },
+
+  '@media (max-width: 500px)': {
+    flexDirection: 'column',
+    alignItems: 'start',
     gap: '$4',
   },
 })
