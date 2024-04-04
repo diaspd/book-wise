@@ -21,7 +21,7 @@ export function TrendingBooks() {
       <div>
         <span> Livros populares</span>
         <SeeAllLink href="/explore">
-          Ver todos
+          <span>Ver todos</span>
           <CaretRight />
         </SeeAllLink>
       </div>

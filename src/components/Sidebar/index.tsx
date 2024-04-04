@@ -57,7 +57,7 @@ export function Sidebar() {
 
       {!session ? (
         <SignInLink href="/login">
-          Fazer Login
+          <span>Fazer Login</span>
           <SignIn size={20} style={{ color: '#50B2C0' }} />
         </SignInLink>
       ) : (
