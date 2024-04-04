@@ -1,13 +1,14 @@
 import { MagnifyingGlass, User } from '@phosphor-icons/react'
 import { Book, CategoriesOnBooks, Category, Rating } from '@prisma/client'
 import Link from 'next/link'
+import { CaretLeft } from 'phosphor-react'
 import { useMemo, useState } from 'react'
 
 import { Input } from '@/components/Input'
 import { PageTitle } from '@/components/PageTitle'
 
 import { ProfileRatingCard } from '../ProfileRatingCard'
-import { Container, RatingsList } from './styles'
+import { Container, Goback, RatingsList } from './styles'
 
 export type ProfileRating = Rating & {
   book: Book & {
@@ -37,7 +38,12 @@ export function ProfileRatings({ ratings, isOwnProfile }: ProfileRatingsProps) {
       {isOwnProfile ? (
         <PageTitle icon={<User size={25} />} title="Perfil" />
       ) : (
-        <Link href="/" color="white" style={{ alignSelf: 'flex-start' }} />
+        <Link href="/" style={{ textDecoration: 'none' }}>
+          <Goback>
+            <CaretLeft color="#fff" size={24} />
+            <span style={{ color: 'white' }}>Voltar</span>
+          </Goback>
+        </Link>
       )}
       <Input
         placeholder="Buscar livro avaliado"

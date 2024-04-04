@@ -13,6 +13,12 @@ export const Container = styled('div', {
   },
 })
 
+export const Goback = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  marginBottom: 35,
+})
+
 export const RatingsList = styled('div', {
   display: 'flex',
   flexDirection: 'column',
