@@ -2,8 +2,9 @@ import { BookmarkSimple, X } from '@phosphor-icons/react'
 import { CategoriesOnBooks, Category } from '@prisma/client'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useQuery } from '@tanstack/react-query'
+import { useRouter } from 'next/router'
 import { BookOpen } from 'phosphor-react'
-import { ReactNode, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 
 import { BookWithAverageRating } from '@/components/BookCard'
 import { Stars } from '@/components/Stars'
@@ -38,6 +39,15 @@ type RatingsModalProps = {
 export function RatingsModal({ bookId, children }: RatingsModalProps) {
   const [open, setOpen] = useState(false)
 
+  const router = useRouter()
+  const paramBookId = router.query.book as string
+
+  useEffect(() => {
+    if (paramBookId === bookId) {
+      setOpen(true)
+    }
+  }, [bookId, paramBookId])
+
   const { data: book } = useQuery<BookDetails>({
     queryKey: ['book', bookId],
     queryFn: async () => {
@@ -47,12 +57,23 @@ export function RatingsModal({ bookId, children }: RatingsModalProps) {
     enabled: open,
   })
 
-  const ratingsLength = book?.ratings.length ?? 0
+  const ratingsLength = book?.ratings?.length ?? 0
+
   const categoriesFormated =
     book?.categories?.map((x) => x?.category?.name)?.join(', ') ?? ''
 
+  const onOpenChange = (open: boolean) => {
+    if (open) {
+      router.push(`/explore?book=${bookId}`, undefined, { shallow: true })
+    } else {
+      router.push('/explore', undefined, { shallow: true })
+    }
+
+    setOpen(open)
+  }
+
   return (
-    <Dialog.Root open={open} onOpenChange={setOpen}>
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <DialogOverlay />

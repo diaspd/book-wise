@@ -41,4 +41,9 @@ export const DialogClose = styled(Dialog.Close, {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+
+  '&:hover': {
+    cursor: 'pointer',
+    color: '$purple100',
+  },
 })
