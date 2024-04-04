@@ -47,7 +47,10 @@ export function Sidebar() {
           </StyledLink>
 
           {session && (
-            <StyledLink href={`/profile/${session?.user.id}`}>
+            <StyledLink
+              href={`/profile/${session?.user.id}`}
+              active={router.asPath === `/profile/${session.user.id}`}
+            >
               <User size={24} />
               <span>Perfil</span>
             </StyledLink>
