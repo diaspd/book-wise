@@ -49,7 +49,7 @@ export function ProfileDetails({ profile }: ProfileDetailsProps) {
         {profile?.mostReadCategory && (
           <ProfileDetailsItem
             icon={<BookmarkSimple />}
-            info={profile.mostReadCategory}
+            info={profile?.mostReadCategory}
             label="Categoria mais lida"
           />
         )}

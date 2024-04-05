@@ -7,12 +7,12 @@ import { BookOpen } from 'phosphor-react'
 import { ReactNode, useEffect, useState } from 'react'
 
 import { BookWithAverageRating } from '@/components/BookCard'
+import { RatingWithAuthor } from '@/components/BookRatings/UserCard'
 import { Stars } from '@/components/Stars'
 import { api } from '@/lib/axios'
 
-import { BookInfo } from './BookInfo'
-import { BookRatings } from './BookRatings'
-import { RatingWithAuthor } from './BookRatings/UserCard'
+import { BookInfo } from '../BookInfo'
+import { BookRatings } from '../BookRatings'
 import {
   BookContent,
   BookDetailsContainer,

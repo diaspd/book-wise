@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
 import { AuthButtons } from '@/components/AuthButtons'
+import { Container, Hero, HeroImg, LoginContainer } from '@/styles/pages/login'
 
 import HeroImage from '../../assets/logo.svg'
-import { Container, Hero, HeroImg, LoginContainer } from './styles'
 
 export default function Login() {
   return (

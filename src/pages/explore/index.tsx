@@ -8,10 +8,14 @@ import { Input } from '@/components/Input'
 import { PageTitle } from '@/components/PageTitle'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { api } from '@/lib/axios'
+import {
+  BooksGrid,
+  ExploreContainer,
+  TagsContainer,
+} from '@/styles/pages/explore'
 
+import { Tag } from '../../components/Tags'
 import { NextPageWithLayout } from '../_app'
-import { Tag } from './components/Tags'
-import { BooksGrid, ExploreContainer, TagsContainer } from './styles'
 
 const ExplorePage: NextPageWithLayout = () => {
   const [search, setSearch] = useState('')

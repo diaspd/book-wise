@@ -5,10 +5,10 @@ import { PageTitle } from '@/components/PageTitle'
 import { RatingAuthorAndBook, RatingCard } from '@/components/RatingCard'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { api } from '@/lib/axios'
+import { Books, Container, Header, StartContainer } from '@/styles/pages/home'
 
+import { TrendingBooks } from '../../components/TrendingBooks'
 import { NextPageWithLayout } from '../_app'
-import { TrendingBooks } from './components/TrendingBooks'
-import { Books, Container, Header, StartContainer } from './styles'
 
 const HomePage: NextPageWithLayout = () => {
   const { data: ratings } = useQuery<RatingAuthorAndBook[]>({

@@ -1,6 +1,6 @@
 import { Book } from '@prisma/client'
 
-import { RatingsModal } from '@/pages/explore/components/RatingsModal'
+import { RatingsModal } from '@/components/RatingsModal'
 
 import { Stars } from '../Stars'
 import {

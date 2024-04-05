@@ -3,13 +3,13 @@ import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import { ReactElement } from 'react'
 
+import { ProfileDetails } from '@/components/ProfileDetails'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { api } from '@/lib/axios'
+import { Container } from '@/styles/pages/home'
 
+import { ProfileRating, ProfileRatings } from '../../components/ProfileRatings'
 import { NextPageWithLayout } from '../_app'
-import { Container } from '../home/styles'
-import { ProfileDetails } from './ProfileDetails'
-import { ProfileRating, ProfileRatings } from './ProfileRatings'
 
 export type ProfileData = {
   ratings: ProfileRating[]
@@ -38,7 +38,6 @@ const ProfilePage: NextPageWithLayout = () => {
       const { data } = await api.get(`/profile/${userId}`)
       return data?.profile ?? {}
     },
-    enabled: !!userId,
   })
 
   return (
