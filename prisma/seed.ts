@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+
 import { books } from './constants/books'
 import { categories } from './constants/categories'
 import { ratings } from './constants/ratings'
