@@ -26,7 +26,7 @@ export function ProfileDetails({ profile }: ProfileDetailsProps) {
           alt={profile.user.name}
           src={profile.user.avatar_url!}
         />
-        <span>{profile.user.name}</span>
+        <strong>{profile.user.name}</strong>
         <span>membro desde {memberSinceYear}</span>
       </UserInfo>
 

@@ -11,6 +11,11 @@ export const Container = styled('div', {
   '&::-webkit-scrollbar': {
     display: 'none',
   },
+
+  '@media (max-width: 864px)': {
+    paddingRight: 6,
+    paddingLeft: 6,
+  },
 })
 
 export const Goback = styled('div', {

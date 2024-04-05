@@ -17,7 +17,7 @@ export function ProfileDetailsItem({
     <Container>
       {icon}
       <div>
-        <h2>{info}</h2>
+        <strong>{info}</strong>
         <span>{label}</span>
       </div>
     </Container>

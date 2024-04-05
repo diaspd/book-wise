@@ -6,6 +6,13 @@ export const Container = styled('div', {
   alignItems: 'center',
   borderLeft: '1px solid $gray700',
   height: 'max-content',
+
+  '@media (max-width: 864px)': {
+    borderLeft: '0',
+    borderTop: '1px solid $gray700',
+    paddingTop: '$8',
+    paddingBottom: '$4',
+  },
 })
 
 export const UserInfo = styled('div', {
@@ -21,6 +28,15 @@ export const UserInfo = styled('div', {
     background: '$gradient-horizontal',
     borderRadius: '$full',
     marginTop: 40,
+  },
+
+  '> strong': {
+    marginTop: 20,
+    fontSize: '$xl',
+  },
+
+  '> span': {
+    color: '$gray400',
   },
 })
 

@@ -36,7 +36,11 @@ export function ProfileRatings({ ratings, isOwnProfile }: ProfileRatingsProps) {
   return (
     <Container>
       {isOwnProfile ? (
-        <PageTitle icon={<User size={25} />} title="Perfil" />
+        <PageTitle
+          icon={<User size={32} />}
+          title="Perfil"
+          style={{ marginBottom: 40 }}
+        />
       ) : (
         <Link href="/" style={{ textDecoration: 'none' }}>
           <Goback>

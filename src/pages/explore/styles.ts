@@ -13,7 +13,6 @@ export const ExploreContainer = styled('section', {
 
     '@media (max-width: 864px)': {
       flexDirection: 'column',
-      padding: '0 $6',
     },
 
     '> div': {
@@ -27,7 +26,7 @@ export const ExploreContainer = styled('section', {
   },
 
   '@media (max-width: 864px)': {
-    padding: '$2 2rem',
+    padding: '$2 $8',
     height: '60rem',
   },
 })
@@ -38,10 +37,6 @@ export const TagsContainer = styled('div', {
   gap: '$3',
   marginTop: 40,
   marginBottom: 48,
-
-  '@media (max-width: 864px)': {
-    padding: '0 $6',
-  },
 })
 
 export const BooksGrid = styled('div', {
@@ -63,6 +58,5 @@ export const BooksGrid = styled('div', {
 
   '@media (max-width: 864px)': {
     gridTemplateColumns: 'repeat(1, 1fr)',
-    padding: '0 $6',
   },
 })

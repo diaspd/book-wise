@@ -3,6 +3,15 @@ import Link from 'next/link'
 
 import { styled } from '../../styles/index'
 
+export const Header = styled('header', {
+  marginBottom: 40,
+
+  '@media (max-width: 864px)': {
+    marginLeft: 30,
+    marginTop: 8,
+  },
+})
+
 export const Container = styled('div', {
   display: 'grid',
   height: '100%',
@@ -14,9 +23,10 @@ export const Container = styled('div', {
 
   '@media (max-width: 864px)': {
     display: 'flex',
-    padding: '$2 2rem',
-    height: '65rem',
+    padding: '$2 $6',
+    height: '75rem',
     flexDirection: 'column',
+    gap: '$5',
   },
 })
 
@@ -25,13 +35,10 @@ export const LogoImg = styled(Link, {})
 export const StartContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
-  paddingTop: '$4',
 
   paddingBottom: '8rem',
 
   overflowY: 'auto',
-  height: '100%',
-  width: '100%',
 
   '&::-webkit-scrollbar': {
     display: 'none',
@@ -41,6 +48,7 @@ export const StartContainer = styled('main', {
     width: '100%',
     height: '100%',
     margin: '$2',
+    paddingBottom: '1rem',
   },
 })
 
