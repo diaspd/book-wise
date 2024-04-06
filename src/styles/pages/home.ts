@@ -82,3 +82,18 @@ export const BookImage = styled(Image, {
   height: 94,
   width: 64,
 })
+
+export const LatestContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  marginBottom: 40,
+  marginTop: 15,
+
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: '$4',
+    marginBottom: '$4',
+  },
+})

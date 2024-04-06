@@ -6,7 +6,6 @@ export const BookCard = styled('div', {
   display: 'flex',
   padding: '$6',
   flexDirection: 'column',
-  background: '$gray700',
   borderRadius: '$md',
   width: '100%',
 
@@ -49,6 +48,19 @@ export const BookCard = styled('div', {
   '@media (max-width: 864px)': {
     width: '100%',
   },
+
+  variants: {
+    variant: {
+      default: {
+        backgroundColor: '$gray700',
+      },
+      secondary: {
+        backgroundColor: '$gray600',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+    },
+  },
 })
 
 export const Description = styled('div', {
@@ -76,6 +88,14 @@ export const BookCardImage = styled(Image, {
   '&:hover': {
     filter: 'brightness(1.1)',
   },
+})
+
+export const Details = styled('div', {
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  marginBottom: '$3',
 })
 
 export const ShowMoreButton = styled('button', {
