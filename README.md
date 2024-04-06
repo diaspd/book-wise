@@ -35,11 +35,29 @@ $ cd
 $ npm install
 ```
 
-## Running the app
+## Running the app locally
+
+Change the 'datasource db' in `./prisma/schema.prisma` to: </br>
+```bash
+  provider     = "sqlite"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+```
+Delete the folder migrations and run 
 
 ```bash
-$ npm run dev
+$ npx prisma migrate dev
 ```
+
+</br>
+
+Then just run:
+```bash
+$ npx prisma generate && npm run dev
+```
+
+And your app will be available on ``http://localhost://3000``
+
 </br>
 
 ## 💻 Technologies
