@@ -6,6 +6,7 @@ import { ReactElement, useState } from 'react'
 import { BookCard, BookWithAverageRating } from '@/components/BookCard'
 import { Input } from '@/components/Input'
 import { PageTitle } from '@/components/PageTitle'
+import { ExploreSkeleton } from '@/components/Skeletons/ExploreSkeleton'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { api } from '@/lib/axios'
 import {
@@ -23,7 +24,9 @@ const ExplorePage: NextPageWithLayout = () => {
     null,
   )
 
-  const { data: categories } = useQuery<Category[]>({
+  const { data: categories, isLoading: isCategoriesLoading } = useQuery<
+    Category[]
+  >({
     queryKey: ['categories'],
     queryFn: async () => {
       const { data } = await api.get('/books/categories')
@@ -32,7 +35,9 @@ const ExplorePage: NextPageWithLayout = () => {
     },
   })
 
-  const { data: books } = useQuery<BookWithAverageRating[]>({
+  const { data: books, isLoading: isBooksLoading } = useQuery<
+    BookWithAverageRating[]
+  >({
     queryKey: ['books', isCategorySelected],
     queryFn: async () => {
       const { data } = await api.get('/books', {
@@ -76,21 +81,37 @@ const ExplorePage: NextPageWithLayout = () => {
           Tudo
         </Tag>
 
-        {categories?.map((category) => (
-          <Tag
-            key={category.id}
-            active={isCategorySelected === category.id}
-            onClick={() => setIsCategorySelected(category.id)}
-          >
-            {category.name}
-          </Tag>
-        ))}
+        {isCategoriesLoading ? (
+          <>
+            {Array.from({ length: 12 }).map((_, i) => {
+              return <Tag key={i}> </Tag>
+            })}
+          </>
+        ) : (
+          <>
+            {categories?.map((category) => (
+              <Tag
+                key={category.id}
+                active={isCategorySelected === category.id}
+                onClick={() => setIsCategorySelected(category.id)}
+              >
+                {category.name}
+              </Tag>
+            ))}
+          </>
+        )}
       </TagsContainer>
 
       <BooksGrid>
-        {filteredBooks?.map((book) => (
-          <BookCard key={book.id} size="lg" book={book} />
-        ))}
+        {isBooksLoading ? (
+          <ExploreSkeleton />
+        ) : (
+          <>
+            {filteredBooks?.map((book) => (
+              <BookCard key={book.id} size="lg" book={book} />
+            ))}
+          </>
+        )}
       </BooksGrid>
     </ExploreContainer>
   )
