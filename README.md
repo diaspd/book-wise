@@ -48,6 +48,7 @@ Delete the folder migrations and run
 ```bash
 $ npx prisma migrate dev
 ```
+And change the file `.env.example` to `.env`
 
 </br>
 
