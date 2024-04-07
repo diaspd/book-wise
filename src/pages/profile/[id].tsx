@@ -4,6 +4,8 @@ import { useSession } from 'next-auth/react'
 import { ReactElement } from 'react'
 
 import { ProfileDetails } from '@/components/ProfileDetails'
+import { ProfileSkeleton } from '@/components/Skeletons/ProfileSkeleton'
+import { ProfileDetailsSkeleton } from '@/components/Skeletons/ProfileSkeleton/ProfileDetailsSkeleton'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { api } from '@/lib/axios'
 import { Container } from '@/styles/pages/home'
@@ -51,7 +53,10 @@ const ProfilePage: NextPageWithLayout = () => {
           <ProfileDetails profile={profile} />
         </>
       ) : (
-        <h1>Carregando...</h1>
+        <>
+          <ProfileSkeleton />
+          <ProfileDetailsSkeleton />
+        </>
       )}
     </Container>
   )

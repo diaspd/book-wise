@@ -12,19 +12,36 @@ const skeletonAnimation = keyframes({
 
 export const Container = styled('div', {
   display: 'grid',
-  height: '50%',
+
+  '> section': {
+    animation: `${skeletonAnimation} 2300ms ease-in-out infinite`,
+    height: 45,
+    marginBottom: '$3',
+    width: '30%',
+    display: 'block',
+    borderRadius: '$md',
+  },
+
+  '> div': {
+    animation: `${skeletonAnimation} 2300ms ease-in-out infinite`,
+    height: 45,
+    marginBottom: '$3',
+    width: '100%',
+    display: 'block',
+    borderRadius: '$md',
+    marginTop: '$5',
+  },
 
   '> span': {
     animation: `${skeletonAnimation} 2300ms ease-in-out infinite`,
     height: 10,
-    marginBottom: '$3',
     width: '50%',
     display: 'block',
     borderRadius: '$md',
     marginTop: '$5',
   },
 
-  '> div': {
+  '> main': {
     animation: `${skeletonAnimation} 2300ms ease-in-out infinite`,
     height: 200,
     width: '100%',
