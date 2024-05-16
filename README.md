@@ -75,7 +75,7 @@ This project was developed with the following technologies:
 </br>
 
 ## 📄 Project
-💰 A project made in Nextjs to list books, search for them, rate them, create account and more.
+💰 A project made in to list books, search for them, rate them, create account and more.
 
 <br></br>
 
